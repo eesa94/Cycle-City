@@ -2,15 +2,20 @@
 <html>
   <head>
     <title>Nameofapp</title>
-    <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <nav>
+    <nav class="navbar">
       <ul>
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "About", simple_pages_about_path %></li>
@@ -21,7 +26,12 @@
     <%= yield %>
 
     <footer>
-      &copy; 2018 Bike Berlin
+      <div class="tagline">
+        <p class=><em>...on your bike!</em></p>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2018 Bike Berlin</p>
+      </div>
     </footer>
 
   </body>
