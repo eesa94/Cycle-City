@@ -7,6 +7,7 @@ body {
   padding-top: 80px;
 }
 
+
 // Navbar styling
 .navbar {
   display: flex;
@@ -59,20 +60,89 @@ body {
   color: #fab297 !important;
 }
 
+@media (max-width: 768px) {
+  .title {
+    display: none;
+  }
+  .navbar {
+    display: block;
+    height: auto;
+  }
+  .navbar li {
+    display: block;
+  }
+  .navbar-inverse .navbar-collapse {
+    border-color: skyblue;
+  }
+  .navbar-inverse .navbar-toggle {
+    background-color: skyblue;
+    border-color: #118ab7;
+  }
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #118ab7;
+  }
+  .navbar-inverse .navbar-toggle:focus,
+  .navbar-inverse .navbar-toggle:hover {
+    background-color: skyblue;
+  }
+}
 
 
-// Header Styling
-h1 {
-  font-family: Verdana, sans-serif;
-  text-decoration: underline;
-  color: skyblue;
+// Home styling
+#hero-container {
+  background-image: url("flo-karr-145590-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  width: 100%;
+  opacity: 0.88;
+}
+
+#hero-caption {
+  // width: 65%;
+  max-width: 48vw;
+  margin-top: 16em;
+  border: 6px solid #0f022d;
+  border-radius: 15px;
+}
+
+#hero-caption h1 {
+  margin-bottom: 20px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #0f022d;
   text-align: center;
+  font-size: 3.5em;
+}
+
+#caption-divider {
+  border-top: 2px solid #e3eafc;
+}
+
+#hero-caption h2 {
+  color: #de5c1c;
+  background-color: #0f022d;
+  padding: 20px 5px;
+  width: 53%;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+  font-size: 1.8vw;
+  transition: color 300ms, background-color 300ms, opacity 300ms;
+}
+
+#hero-caption h2:hover {
+  background-color: #de5c1c;
+  color: #0f022d;
+  opacity: 0.85;
 }
 
 
 // Footer styling
 footer {
-  margin-top: 1.5em;
+  margin-top: 0;
   height: 200px;
   background-color: #fab297;
 }
