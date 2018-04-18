@@ -7,6 +7,12 @@ body {
   padding-top: 80px;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-top: 72px;
+  }
+}
+
 
 // Navbar styling
 .navbar {
@@ -129,7 +135,9 @@ body {
   width: 53%;
   margin: 0 auto 20px auto;
   border-radius: 10px;
+  font-family: 'Exo', sans-serif;
   font-size: 1.8vw;
+  font-weight: 600;
   transition: color 300ms, background-color 300ms, opacity 300ms;
 }
 
@@ -144,6 +152,12 @@ body {
   text-decoration: none;
 }
 
+@media (max-width: 768px) {
+  #hero-caption h1 {
+    font-size: 2.0em;
+  }
+}
+
 
 // Footer styling
 footer {
@@ -153,8 +167,9 @@ footer {
 }
 
 .tagline {
-  width: 35%;
-  margin: 0 auto 2.8em auto;
+  // width: 35%;
+  height: 70%;
+  margin: 0 auto;
   padding-top: 0.4em;
   font-size: 2.5em;
   text-transform: capitalize;
@@ -162,11 +177,17 @@ footer {
 }
 
 .copyright {
-  width: 15%;
+  // width: 15%;
+  height: 30%;
   margin: 0 auto;
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 2.0em;
+  }
+}
 
 // Common Elements styling
 h1 {
