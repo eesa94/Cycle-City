@@ -90,7 +90,7 @@ body {
 
 // Home styling
 #hero-container {
-  background-image: url("flo-karr-145590-unsplash.jpg");
+  background-image: url(asset_path("flo-karr-145590-unsplash.jpg"));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,7 +112,7 @@ body {
   font-family: 'Exo', sans-serif;
   font-weight: 900;
   text-decoration: none;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: #0f022d;
   text-align: center;
   font-size: 3.5em;
@@ -139,6 +139,11 @@ body {
   opacity: 0.85;
 }
 
+#hero-caption a:hover,
+#hero-caption a:focus {
+  text-decoration: none;
+}
+
 
 // Footer styling
 footer {
@@ -160,4 +165,12 @@ footer {
   width: 15%;
   margin: 0 auto;
   text-align: center;
+}
+
+
+// Common Elements styling
+h1 {
+  font-family: 'Exo', sans-serif;
+  font-weight: 800;
+  color: #fab297;
 }
