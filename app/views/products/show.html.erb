@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag(@product.image_url, class: "img-responsive show-view-image") %>
+
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
@@ -9,8 +11,6 @@
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-
-<%= image_tag(@product.image_url, class: "img-responsive") %>
 
 <p>
   <strong>Colour:</strong>

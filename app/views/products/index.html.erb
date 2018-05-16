@@ -2,14 +2,14 @@
 
 <h1>Products</h1>
 
+<%= link_to 'New Product', new_product_path, class: "btn btn-primary", id: "new-product-btn" %>
+
 <div class="container-fluid products">
   <div class="row">
     <% @products.each do |product| %>
-      <%= render partial: "product", locals: {product: product} %>
+      <%= render @products %>
     <% end %>
   </div>
 </div>
 
 <br>
-
-<%= link_to 'New Product', new_product_path %>
