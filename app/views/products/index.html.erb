@@ -1,14 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1 class="page-header animated fadeInLeft">Products</h1>
 
-<%= link_to 'New Product', new_product_path, class: "btn btn-primary", id: "new-product-btn" %>
+<%= link_to 'New Product', new_product_path, class: "btn btn-primary animated fadeInRight", id: "new-product-btn" %>
 
-<div class="container-fluid products">
-  <div class="row">
-    <% @products.each do |product| %>
-      <%= render @products %>
-    <% end %>
+<div class="container-fluid products-container">
+  <div class="row animated fadeIn">
+    <%= render @products %>
   </div>
 </div>
 
