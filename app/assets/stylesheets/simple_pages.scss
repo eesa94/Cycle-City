@@ -24,8 +24,13 @@ html, body {
     padding-top: 72px;
   }
 
+  .main-container {
+    padding-top: 0;
+  }
+
   #nav-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
 
