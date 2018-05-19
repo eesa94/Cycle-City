@@ -1,10 +1,10 @@
-<h1 class="page-header animated fadeInLeft">Contact</h1>
+<h1 class="page-header animated fadeInDown">Contact</h1>
 
 <p class="animated fadeIn">You can contact us by completing the form below</p>
 
 <%= flash[:notice] %>
 
-<%= form_with(url:"/simple_pages/thank_you", class: "animated fadeIn", id: "contact-form", method: "post", local: true) do |form| %>
+<%= form_with(url:"/simple_pages/thank_you", class: "custom-form animated fadeIn", method: "post", local: true) do |form| %>
 <div class="row">
   <div class="form-group">
     <%= form.label :name %>

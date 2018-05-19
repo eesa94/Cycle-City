@@ -48,6 +48,10 @@ label {
   display: block;
 }
 
+.notice,
+.alert {
+  position: absolute;
+}
 
 // Common Elements styling
 .page-header {
@@ -83,7 +87,8 @@ p {
 }
 
 .fadeInLeft,
-.fadeInRight {
+.fadeInRight,
+.fadeInDown {
   animation-duration: 1.3s;
   animation-delay: 0.3s;
 }

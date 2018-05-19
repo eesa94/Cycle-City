@@ -27,9 +27,11 @@
       <!-- Navbar -->
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="title navbar-brand">
-          <%= image_tag("logo_left.png") %>
+          <%= link_to root_path, id: 'home-link' do %>
+            <h1>CYCLECiTy</h1>
+          <% end %>
         </div>
-        <div class="container-fluid">
+        <div class="container-fluid" id="navbar-container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse"
             data-target=".navbar-collapse">
@@ -41,7 +43,6 @@
           </div> <!-- end navbar-header -->
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right" id="nav-list">
-              <li class="hover-item"><%= link_to "Home", root_path %></li>
               <li class="hover-item"><%= link_to "About", simple_pages_about_path %></li>
               <li class="hover-item"><%= link_to "Products", products_path %></li>
               <li class="hover-item"><%= link_to "Orders", orders_path %></li>
@@ -53,13 +54,20 @@
                   <%= form.submit 'Search', id: 'search-btn' %>
                 <% end %>
               </li>
+              <li id="login-logout">
+                <% if user_signed_in? %>
+                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+                <% else %>
+                  <%= link_to('Login', new_user_session_path) %>
+                <% end %>
+              </li>
             </ul>
           </div> <!-- nav -->
         </div> <!-- end nav container -->
-        <div class="title navbar-brand">
-          <%= image_tag("logo_right.png") %>
-        </div>
       </nav> <!-- end navbar -->
+
+      <span class="notice"><%= notice %></span>
+      <span class="alert"><%= alert %></span>
 
       <div id="body-content">
       <%= yield %>
@@ -75,5 +83,17 @@
       </footer>
     </div>
 
+    <script>
+      $(document).ready(function() {
+        $('#body-content').css('opacity', '1.0');
+
+        $('#q').click(function() {
+          $('#search-btn').addClass('animated pulse').one('animationend', function() {
+            $(this).removeClass('animated pulse');
+          });
+        });
+
+      });
+    </script>
   </body>
 </html>
