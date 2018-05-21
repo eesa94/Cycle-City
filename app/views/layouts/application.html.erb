@@ -66,8 +66,16 @@
         </div> <!-- end nav container -->
       </nav> <!-- end navbar -->
 
-      <span class="notice"><%= notice %></span>
-      <span class="alert"><%= alert %></span>
+      <% if notice %>
+        <div class="warning">
+          <div class="notice alert alert-warning" role="alert"><%= notice %></div>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="warning">
+          <div class="alert alert-danger" role="alert"><%= alert %></div>
+        </div>
+      <% end %>
 
       <div id="body-content">
       <%= yield %>
@@ -83,17 +91,5 @@
       </footer>
     </div>
 
-    <script>
-      $(document).ready(function() {
-        $('#body-content').css('opacity', '1.0');
-
-        $('#q').click(function() {
-          $('#search-btn').addClass('animated pulse').one('animationend', function() {
-            $(this).removeClass('animated pulse');
-          });
-        });
-
-      });
-    </script>
   </body>
 </html>

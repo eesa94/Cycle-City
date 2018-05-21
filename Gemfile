@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Devise for user authentication
 gem 'devise'
+# CanCanCan for authorization
+gem 'cancancan', '~> 2.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

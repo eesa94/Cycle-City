@@ -48,9 +48,20 @@ label {
   display: block;
 }
 
-.notice,
-.alert {
+// .notice,
+// .alert {
+//   position: absolute;
+// }
+
+.warning {
   position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+.alert {
+  width: 30%;
+  margin: 20px auto 0;
 }
 
 // Common Elements styling
@@ -98,6 +109,10 @@ p {
   animation-delay: 0.3s;
 }
 
+.alert-animation {
+  animation-delay: 2.5s
+}
+
 // .visible {
 //   visibility: visible;
 // }
@@ -106,6 +121,6 @@ p {
 //   visibility: hidden;
 // }
 
-// #body-content {
-//   opacity: 0;
-// }
+#body-content {
+  opacity: 0;
+}
