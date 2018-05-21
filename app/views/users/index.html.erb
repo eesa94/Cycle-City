@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 <h1 class="page-header animated fadeIn">Users</h1>
 
@@ -19,23 +19,21 @@
           <hr>
         </div>
       </div>
-      <div class="row">
-
-        <% @users.each do |user| %>
-        <div class="col-xs-4">
-          <p><%= user.first_name %></p>
+      <% @users.each do |user| %>
+        <div class="row">
+          <div class="col-xs-4">
+            <p><%= user.first_name %></p>
+          </div>
+          <div class="col-xs-4">
+            <p><%= user.last_name %></p>
+          </div>
+          <div class="col-xs-4">
+            <span><%= link_to 'Show', user %></span> |
+            <span><%= link_to 'Edit', edit_user_path(user) %></span> |
+            <span><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          </div>
         </div>
-        <div class="col-xs-4">
-          <p><%= user.last_name %></p>
-        </div>
-        <div class="col-xs-4">
-          <span><%= link_to 'Show', user %></span> |
-          <span><%= link_to 'Edit', edit_user_path(user) %></span> |
-          <span><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></span>
-        </div>
-        <% end %>
-        
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
