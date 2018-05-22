@@ -97,29 +97,23 @@ p {
   line-height: 1.8;
 }
 
+
+// Animation
 .fadeInLeft,
 .fadeInRight,
 .fadeInDown {
   animation-duration: 1.3s;
-  animation-delay: 0.3s;
+  animation-delay: 1s;
 }
 
 .fadeIn {
   animation-duration: 1.5s;
-  animation-delay: 0.3s;
+  animation-delay: 1s;
 }
 
 .alert-animation {
   animation-delay: 2.5s
 }
-
-// .visible {
-//   visibility: visible;
-// }
-
-// .hidden {
-//   visibility: hidden;
-// }
 
 #body-content {
   opacity: 0;
