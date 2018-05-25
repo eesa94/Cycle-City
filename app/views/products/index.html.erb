@@ -2,7 +2,9 @@
 
 <h1 class="page-header animated fadeInDown">Products</h1>
 
-<%= link_to 'New Product', new_product_path, class: "btn btn-primary animated fadeInRight", id: "new-product-btn" %>
+<%# if admin_signed_in? %>
+  <%= link_to 'New Product', new_product_path, class: "btn btn-primary animated fadeInRight", id: "new-product-btn" %>
+<%# end %>
 
 <div class="container-fluid products-container">
   <div class="row animated fadeIn">
