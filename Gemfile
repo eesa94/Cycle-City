@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # CanCanCan for authorization
 gem 'cancancan', '~> 2.0'
+# Gemfile for Rails 3+, Sinatra, or Merb
+gem 'will_paginate', '~> 3.1.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
