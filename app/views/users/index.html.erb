@@ -1,6 +1,4 @@
-<!-- <p id="notice"><%= notice %></p> -->
-
-<h1 class="page-header animated fadeIn">Users</h1>
+<h1 class="page-header">Users</h1>
 
 <div class="container">
   <div class="row">
@@ -29,8 +27,11 @@
           </div>
           <div class="col-xs-4">
             <span><%= link_to 'Show', user %></span> |
-            <span><%= link_to 'Edit', edit_user_path(user) %></span> |
-            <span><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+            <span><%= link_to 'Edit', edit_user_path(user) %></span>
+            <% if signed_in? && current_user.admin? %>
+              |
+              <span><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+              <% end %>
           </div>
         </div>
       <% end %>
