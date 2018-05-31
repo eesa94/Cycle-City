@@ -26,20 +26,35 @@
 
     <!-- Secondary navbar (<1200px) -->
     <nav class="secondary-navbar sidenav">
-      <span id="sidenav-close-btn">&times;</span>
-      <div class="inner-nav-container" id="navbar-container">
+      <i class="fas fa-times" id="sidenav-close-btn"></i>
+      <div class="inner-nav-container">
         <div class="navbar-inner">
-          <ul class="navbar-nav" id="nav-list">
-            <li class="hover-item"><%= link_to "Home", root_path %></li>
-            <li class="hover-item"><%= link_to "About", simple_pages_about_path %></li>
-            <li class="hover-item"><%= link_to "Products", products_path %></li>
+          <ul class="navbar-inner-list">
+            <li class="sidenav-item"><%= link_to "Home", root_path %></li>
+            <li class="sidenav-item"><%= link_to "About", simple_pages_about_path %></li>
+            <li class="sidenav-item"><%= link_to "Products", products_path %></li>
             <% if user_signed_in? %>
-              <li class="hover-item"><%= link_to "Orders", orders_path %></li>
+              <li class="sidenav-item"><%= link_to "Orders", orders_path %></li>
             <% end %>
-            <li class="hover-item"><%= link_to "Contact", simple_pages_contact_path %></li>
+            <li class="sidenav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
           </ul>
         </div>
       </div>
+      <li id="sidenav-search-box">
+        <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
+          <%= form.text_field :q, class:'sidenav-textfield', id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
+          <%= form.submit 'Search', id: 'search-btn' %>
+        <% end %>
+      </li>
+        <% if user_signed_in? %>
+          <%= link_to(destroy_user_session_path, method: :delete) do %>
+            <button class="login-logout sidenav-login-logout">Logout</button>
+          <% end %>
+        <% else %>
+          <%= link_to(new_user_session_path) do %>
+            <button class="login-logout sidenav-login-logout">Login</button>
+          <% end %>
+        <% end %>
     </nav>
 
     <div class="main-container">
@@ -83,7 +98,7 @@
               <% end %>
           </div>
         </div>
-        <span id="sidenav-open-btn">open</span>
+        <i class="fas fa-bars" id="sidenav-open-btn"></i>
       </nav>
 
 
