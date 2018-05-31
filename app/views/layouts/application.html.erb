@@ -24,49 +24,70 @@
 
   <body>
 
+    <!-- Secondary navbar (<1200px) -->
+    <nav class="secondary-navbar sidenav">
+      <span id="sidenav-close-btn">&times;</span>
+      <div class="inner-nav-container" id="navbar-container">
+        <div class="navbar-inner">
+          <ul class="navbar-nav" id="nav-list">
+            <li class="hover-item"><%= link_to "Home", root_path %></li>
+            <li class="hover-item"><%= link_to "About", simple_pages_about_path %></li>
+            <li class="hover-item"><%= link_to "Products", products_path %></li>
+            <% if user_signed_in? %>
+              <li class="hover-item"><%= link_to "Orders", orders_path %></li>
+            <% end %>
+            <li class="hover-item"><%= link_to "Contact", simple_pages_contact_path %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="main-container">
-      <!-- Navbar -->
-      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+      <!-- Primary Navbar (=>1200px) -->
+      <nav class="navbar navbar-inverse navbar-fixed-top primary-navbar" role="navigation">
         <div class="title navbar-brand">
           <%= link_to root_path, id: 'home-link' do %>
             <h1>CYCLECiTy</h1>
           <% end %>
         </div>
-        <div class="container-fluid" id="navbar-container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
-            data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div> <!-- end navbar-header -->
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right" id="nav-list">
+        <div class="first-nav-container" id="navbar-container">
+          <div class="navbar-inner">
+            <ul class="nav navbar-nav" id="nav-list">
+              <li class="hover-item"><%= link_to "Home", root_path %></li>
               <li class="hover-item"><%= link_to "About", simple_pages_about_path %></li>
               <li class="hover-item"><%= link_to "Products", products_path %></li>
               <% if user_signed_in? %>
                 <li class="hover-item"><%= link_to "Orders", orders_path %></li>
               <% end %>
               <li class="hover-item"><%= link_to "Contact", simple_pages_contact_path %></li>
-              <li id="search-box">
-                <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
-                  <%= form.text_field :q, id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
-                  <%= form.submit 'Search', id: 'search-btn' %>
-                <% end %>
-              </li>
-              <li id="login-logout">
-                <% if user_signed_in? %>
-                  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-                <% else %>
-                  <%= link_to('Login', new_user_session_path) %>
-                <% end %>
-              </li>
             </ul>
-          </div> <!-- nav -->
-        </div> <!-- end nav container -->
-      </nav> <!-- end navbar -->
+          </div>
+        </div>
+        <div class="second-nav-container">
+          <div class="nav-right">
+            <li id="search-box">
+              <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
+                <%= form.text_field :q, id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
+                <%= form.submit 'Search', id: 'search-btn' %>
+              <% end %>
+            </li>
+              <% if user_signed_in? %>
+                <%= link_to(destroy_user_session_path, method: :delete) do %>
+                  <button class="login-logout">Logout</button>
+                <% end %>
+              <% else %>
+                <%= link_to(new_user_session_path) do %>
+                  <button class="login-logout">Login</button>
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+        <span id="sidenav-open-btn">open</span>
+      </nav>
+
+
+
 
       <% if notice %>
         <div class="info-message">
