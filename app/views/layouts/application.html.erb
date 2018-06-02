@@ -24,43 +24,11 @@
 
   <body>
 
-    <!-- Secondary navbar (<1200px) -->
-    <nav class="secondary-navbar sidenav">
-      <i class="fas fa-times" id="sidenav-close-btn"></i>
-      <div class="inner-nav-container">
-        <div class="navbar-inner">
-          <ul class="navbar-inner-list">
-            <li class="sidenav-item"><%= link_to "Home", root_path %></li>
-            <li class="sidenav-item"><%= link_to "About", simple_pages_about_path %></li>
-            <li class="sidenav-item"><%= link_to "Products", products_path %></li>
-            <% if user_signed_in? %>
-              <li class="sidenav-item"><%= link_to "Orders", orders_path %></li>
-            <% end %>
-            <li class="sidenav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
-          </ul>
-        </div>
-      </div>
-      <li id="sidenav-search-box">
-        <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
-          <%= form.text_field :q, class:'sidenav-textfield', id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
-          <%= form.submit 'Search', id: 'search-btn' %>
-        <% end %>
-      </li>
-        <% if user_signed_in? %>
-          <%= link_to(destroy_user_session_path, method: :delete) do %>
-            <button class="login-logout sidenav-login-logout">Logout</button>
-          <% end %>
-        <% else %>
-          <%= link_to(new_user_session_path) do %>
-            <button class="login-logout sidenav-login-logout">Login</button>
-          <% end %>
-        <% end %>
-    </nav>
-
     <div class="main-container">
 
       <!-- Primary Navbar (=>1200px) -->
       <nav class="navbar navbar-inverse navbar-fixed-top primary-navbar" role="navigation">
+        <i class="fas fa-bars" id="sidenav-open-btn"></i>
         <div class="title navbar-brand">
           <%= link_to root_path, id: 'home-link' do %>
             <h1>CYCLECiTy</h1>
@@ -98,10 +66,40 @@
               <% end %>
           </div>
         </div>
-        <i class="fas fa-bars" id="sidenav-open-btn"></i>
       </nav>
 
-
+      <!-- Secondary navbar (<1200px) -->
+      <nav class="secondary-navbar sidenav">
+        <i class="fas fa-times" id="sidenav-close-btn"></i>
+        <div class="inner-nav-container">
+          <div class="navbar-inner">
+            <ul class="navbar-inner-list">
+              <li class="sidenav-item"><%= link_to "Home", root_path %></li>
+              <li class="sidenav-item"><%= link_to "About", simple_pages_about_path %></li>
+              <li class="sidenav-item"><%= link_to "Products", products_path %></li>
+              <% if user_signed_in? %>
+                <li class="sidenav-item"><%= link_to "Orders", orders_path %></li>
+              <% end %>
+              <li class="sidenav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
+            </ul>
+          </div>
+        </div>
+        <li id="sidenav-search-box">
+          <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
+            <%= form.text_field :q, class:'sidenav-textfield', id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
+            <%= form.submit 'Search', id: 'search-btn' %>
+          <% end %>
+        </li>
+          <% if user_signed_in? %>
+            <%= link_to(destroy_user_session_path, method: :delete) do %>
+              <button class="login-logout sidenav-login-logout">Logout</button>
+            <% end %>
+          <% else %>
+            <%= link_to(new_user_session_path) do %>
+              <button class="login-logout sidenav-login-logout">Login</button>
+            <% end %>
+          <% end %>
+      </nav>
 
 
       <% if notice %>

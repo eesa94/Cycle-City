@@ -1,5 +1,13 @@
 class RegistrationsController < Devise::RegistrationsController
 
+  def create
+    super
+    if @user.persisted?
+      UserMailer.welcome(@user).deliver_now
+    end
+  end
+
+
   private
   # Modify sign up params to include firt and last names.
   # When adding new parameters, need to edit views/devise/registrations/new to include new fields.

@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'ep.94@hotmail.com'
+  default from: 'info@cyclecity.com'
   layout 'mailer'
 end
