@@ -55,7 +55,6 @@ html, body {
   font-family: 'Exo', sans-serif;
   font-weight: 900;
   text-decoration: none;
-  // text-transform: uppercase;
   color: #0f022d;
   text-align: center;
   font-size: 3.5em;
@@ -110,6 +109,10 @@ html, body {
 .about-image {
   max-width: 100%;
   margin: 30px auto;
+}
+
+.thumbnail {
+  box-shadow: 5px 5px 7px lightgrey;
 }
 
 
