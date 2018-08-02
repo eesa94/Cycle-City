@@ -10,7 +10,7 @@
       <h2 class="sub-header product-header">
         <%= @product.name %>
         <span class="price">
-          (<i class="fa fa-dollar-sign"></i><%= @product.price %>)
+          (<i class="fa fa-dollar-sign"></i><%= @product.price/100 %>)
         </span>
       </h2>
 
@@ -26,15 +26,17 @@
           </p>
 
           <p>
-            Price: <%= @product.price %>
+            Price: <%= @product.price/100 %>
           </p>
 
           <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>
           </p>
 
-          <p><%= form_with(url: '/payments/create') do |form| %>
-          <%= render partial: "shared/stripe_checkout_button" %>
-          <% end %>
+          <p>
+            <%= form_with(url: '/payments/create') do |form| %>
+              <%= render partial: "shared/stripe_checkout_button" %>
+              <%= hidden_field_tag(:product_id, @product.id) %>
+            <% end %>
           </p>
         </div>
       </div>
