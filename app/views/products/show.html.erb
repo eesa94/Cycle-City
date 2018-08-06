@@ -29,7 +29,7 @@
             Price: <%= @product.price/100 %>
           </p>
 
-          <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div>
+          <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div>
           </p>
 
           <p>
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <div class="row sub-row">
+      <div class="row sub-row product-reviews">
         <div class="col-xs-12">
           <h3>User Feedback</h3>
           <p>
