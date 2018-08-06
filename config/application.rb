@@ -29,5 +29,8 @@ module Nameofapp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Filter passwords from log files 
+    config.filter_parameters << :password
   end
 end

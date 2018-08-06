@@ -29,4 +29,12 @@ class ApplicationController < ActionController::Base
       end
       #https://github.com/plataformatec/devise/wiki/How-To:-Redirect-back-to-current-page-after-sign-in,-sign-out,-sign-up,-update
 
+
+  protect_from_forgery with: :exception
+
+
+  rescue_from ActionController::InvalidAuthenticityToken do |exception|
+    sign_out_user
+  end
+
 end
