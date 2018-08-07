@@ -1,6 +1,11 @@
 
 <h1 class="page-header animated fadeInDown">Products</h1>
 
+<p>There are currently
+  <%= @products.count %>
+  products in stock
+</p>
+
 <% if signed_in? && current_user.admin? %>
   <%= link_to 'New Product', new_product_path, class: "btn btn-primary", id: "new-product-btn" %>
 <% end %>
