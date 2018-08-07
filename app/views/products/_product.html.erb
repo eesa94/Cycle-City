@@ -1,13 +1,15 @@
-<div class="col-sm-12 col-md-4 products-individual">
-  <%= link_to product do %>
-    <%= image_tag(product.image_url, class: "img-responsive") %>
-  <% end %>
-  <%= link_to product do %>
-    <h3><%= product.name %></h3>
-  <% end %>
-  <p><%= product.colour %></p>
-  <p><%= product.price/100 %></p>
-  <% if signed_in? && current_user.admin? %>
-    <p><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-  <% end %>
-</div>
+<% cache product do %>
+  <div class="col-sm-12 col-md-4 products-individual">
+    <%= link_to product do %>
+      <%= image_tag(product.image_url, class: "img-responsive") %>
+    <% end %>
+    <%= link_to product do %>
+      <h3><%= product.name %></h3>
+    <% end %>
+    <p><%= product.colour %></p>
+    <p><%= product.price/100 %></p>
+    <% if signed_in? && current_user.admin? %>
+      <p><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+  </div>
+<% end %>
