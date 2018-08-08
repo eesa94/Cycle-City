@@ -33,15 +33,31 @@
   margin: 20px auto;
 }
 
+.zoomContainer {
+  display: none;
+}
+
 .product-header {
   text-transform: uppercase;
   color: #fab297;
   letter-spacing: 1.5px;
 }
 
+.product-header-underline {
+  width: 500px;
+  margin: 0 auto 50px;
+  height: 4px;
+  background-color: #fab297;
+}
+
 .price {
   color: #118ab7;
 }
+
+.image-box {
+  padding: 2px;
+}
+
 
 .flickr_pagination {
   text-align: center;
