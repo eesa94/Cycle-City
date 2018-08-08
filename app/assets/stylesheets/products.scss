@@ -44,7 +44,7 @@
 }
 
 .product-header-underline {
-  width: 500px;
+  width: 50%;
   margin: 0 auto 50px;
   height: 4px;
   background-color: #fab297;
@@ -56,6 +56,10 @@
 
 .image-box {
   padding: 2px;
+}
+
+.ratings-container {
+  display: flex;
 }
 
 

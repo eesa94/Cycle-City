@@ -17,38 +17,39 @@
       </div>
 
       <% cache @product do %>
-      <div class="row sub-row">
-        <div class="col-xs-12 col-md-4 more-images-container">
-          <h3 class="mb1">More Images</h3>
-          <div class="more-images-gallery">
-            <div class="row no-margin">
-              <div class="col-md-6 image-box">
-                <%= image_tag("flo-karr-144400-unsplash.jpg", class: "img-responsive") %>
-              </div>
-              <div class="col-md-6 image-box">
-                <%= image_tag("flo-karr-144400-unsplash.jpg", class: "img-responsive") %>
-              </div>
-            </div>
-            <div class="row no-margin">
-              <div class="col-md-6 image-box">
-                <%= image_tag("flo-karr-144400-unsplash.jpg", class: "img-responsive") %>
-              </div>
-              <div class="col-md-6 image-box">
-                <%= image_tag("flo-karr-144400-unsplash.jpg", class: "img-responsive") %>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="row sub-row mb3">
 
-        <div class="col-xs-12 col-md-5">
+        <div class="col-xs-12 col-md-5 col-md-push-4 mb2">
           <h3 class="mb1">Description</h3>
           <p class="justify">
             <%= @product.description %>
           </p>
         </div>
 
-        <div class="col-xs-12 col-md-3">
-          <h3 class="mb1">Product Details</h3>
+        <div class="col-xs-12 col-md-4 col-md-pull-5 more-images-container mb2">
+          <h3 class="mb1">More Images</h3>
+          <div class="more-images-gallery">
+            <div class="row no-margin">
+              <div class="col-xs-6 image-box">
+                <%= image_tag("flo-karr-144400-unsplash.jpg", class: "img-responsive") %>
+              </div>
+              <div class="col-xs-6 image-box">
+                <%= image_tag("flo-karr-144400-unsplash.jpg", class: "img-responsive") %>
+              </div>
+            </div>
+            <div class="row no-margin">
+              <div class="col-xs-6 image-box">
+                <%= image_tag("flo-karr-144400-unsplash.jpg", class: "img-responsive") %>
+              </div>
+              <div class="col-xs-6 image-box">
+                <%= image_tag("flo-karr-144400-unsplash.jpg", class: "img-responsive") %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-3 mb2">
+          <h3 class="mb1">Details</h3>
           <div class="product-details-container">
             <p>
               Colour: <%= @product.colour %>
@@ -56,34 +57,37 @@
             <p>
               Price: <%= @product.price/100 %>
             </p>
+            <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>">
+              <span>Average Rating:</span>
+            </div>
 
-            <p>Average Rating:
-              <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>">
-              </div>
-            </p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4 col-md-offset-4">
             <p>
               <%= form_with(url: '/payments/create') do |form| %>
                 <%= render partial: "shared/stripe_checkout_button" %>
                 <%= hidden_field_tag(:product_id, @product.id) %>
               <% end %>
             </p>
+
           </div>
         </div>
+
       </div> <!-- end sub-row -->
 
       <div class="row sub-row product-reviews">
-        <div class="col-xs-12">
-          <h3>User Feedback</h3>
-          <p>
-            <%= @product.highest_rating_comment&.rating %>
-            <%= @product.lowest_rating_comment&.rating %>
-
+        <div class="col-lg-5 col-lg-offset-1">
+          <h3 class="mb3">Product Reviews</h3>
+          <p class="justify">We greatly value the feedback we receive from satisfied customers, and we love hearing what people have to say about our products.
           </p>
+          <p class="justify mb3">If you are a returning customer, why not leave a comment? Whether good or bad, hearing about your experience is important to us so that we can continue to improve our service.
+          </p>
+          <div class="rated mb1" id="highest-rating" data-score="<%= @product.highest_rating_comment&.rating %>">
+            <span>Product Highest Rating</span>
+          </div>
+          <div class="rated" id="lowest-rating" data-score="<%= @product.lowest_rating_comment&.rating %>">
+            <span>Product Lowest Rating</span>
+          </div>
+        </div>
+        <div class="col-lg-4 col-lg-offset-1">
           <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
           <%= render 'comments' %>
         </div>
