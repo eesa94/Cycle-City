@@ -3,7 +3,7 @@ require 'rails_helper'
 describe Product do
 
   let(:product) { Product.create!(name: "race bike") }
-  let(:user) { User.create!(email: "arsene@wenger.com", password: "password") }
+  let(:user) { User.create!(email: "firstname@lastname.com", password: "password") }
 
   before do
     product.comments.create!(rating: 1, user: user, body: "Awful bike!")
@@ -17,6 +17,14 @@ describe Product do
 
   it "is not valid without a name" do
     expect(Product.new(description: "Nice bike")).not_to be_valid
+  end
+
+  it "returns the highest rating" do
+    expect(product.highest_rating_comment&.rating).to eq 5
+  end
+
+  it "returns the lowest rating" do
+    expect(product.lowest_rating_comment&.rating).to eq 1
   end
 
 end
