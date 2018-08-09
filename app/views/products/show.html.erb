@@ -106,6 +106,6 @@
   </div>
 </div>
 
-<% if signed_in? && current_user.admin? %>
+<% if current_user && current_user.admin? %>
   <%= link_to 'Edit', edit_product_path(@product) %>
 <% end %>
