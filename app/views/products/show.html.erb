@@ -61,6 +61,9 @@
               <span>Average Rating:</span>
             </div>
 
+      <% end %> <!-- end cache loop -->
+
+
             <p>
               <%= form_with(url: '/payments/create') do |form| %>
                 <%= render partial: "shared/stripe_checkout_button" %>
@@ -92,8 +95,6 @@
           <%= render 'comments' %>
         </div>
       </div>
-
-      <% end %> <!-- end cache loop -->
 
 
       <% if signed_in? %>
