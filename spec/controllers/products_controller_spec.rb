@@ -135,7 +135,17 @@ describe ProductsController, type: :controller do
   end
 
 
-
   # Destroy tests
+  describe 'DELETE #destroy' do
+    before do
+      @request.host = 'localhost:3000'
+      @product = FactoryBot.create(:product)
+    end
+    it 'successfully destroys the product' do
+      delete :destroy, params: { id: product }
+      expect(response).to redirect_to(products_path)
+      expect {@product.destroy}.to change(Product, :count).by(-1)
+    end
+  end
 
 end
