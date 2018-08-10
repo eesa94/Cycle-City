@@ -96,4 +96,19 @@ describe ProductsController, type: :controller do
     end
   end
 
+
+  # Create tests
+  describe 'POST #create' do
+    context 'new product form has valid information' do
+      before do
+        sign_in admin
+        @product = FactoryBot.create(:product)
+      end
+      it 'creates the product successfully' do
+        expect(response).to be_ok
+        expect {@product = FactoryBot.create(:product)}.to change(Product, :count).by(1)
+      end
+    end
+  end
+
 end
