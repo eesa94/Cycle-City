@@ -102,7 +102,6 @@ describe ProductsController, type: :controller do
     context 'new product form has valid information' do
       it 'creates the product successfully and redirects to product' do
         @product = FactoryBot.create(:product)
-        expect(response).to be_ok
         expect {@product = FactoryBot.create(:product)}.to change(Product, :count).by(1)
       end
     end
@@ -112,39 +111,25 @@ describe ProductsController, type: :controller do
   # Update tests
   describe 'PATCH #update' do
     context 'edit form has valid information' do
-      it 'updates the product with the new information' do
-        patch :update, params: { id: product }
-        @product = FactoryBot.create(:product, name: "race bike", price: 3500)
-        expect(response).to be_redirect
-      end
-    end
-    context 'edit form has invalid information' do
-      it 'prevents the update and returns to edit form' do
-        patch :update, params: { id: product }
-        @product = FactoryBot.build(:product, name: " ", price: 3700)
-        expect(response).not_to be_ok
-      end
-    end
-  end
-
-
-  describe 'PATCH #update' do
-    context 'edit form has valid information' do
       before do
         @request.host = 'localhost:3000'
+        @product = FactoryBot.create(:product)
       end
       it 'updates the product with the new information' do
-        patch :update, params: { id: product }
-        @product = FactoryBot.create(:product, name: "race bike", price: 3500)
+        patch :update, params: { id: product, name: "race bike" }
         expect(response).to redirect_to '/products/1'
         expect(flash[:notice]).to eq 'Product was successfully updated.'
       end
     end
     context 'edit form has invalid information' do
+      before do
+        @request.host = 'localhost:3000'
+        @product = FactoryBot.create(:product)
+      end
       it 'prevents the update and returns to edit form' do
-        patch :update, params: { id: product }
-        @product = FactoryBot.build(:product, name: " ", price: 3700)
-        expect(response).not_to be_ok
+        patch :update, params: { id: product, name: " " }
+        expect(response).to render_template('edit')
+        expect(flash[:notice]).to eq Nil
       end
     end
   end
