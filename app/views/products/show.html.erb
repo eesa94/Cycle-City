@@ -63,13 +63,20 @@
 
       <% end %> <!-- end cache loop -->
 
-
-            <p>
-              <%= form_with(url: '/payments/create') do |form| %>
-                <%= render partial: "shared/stripe_checkout_button" %>
-                <%= hidden_field_tag(:product_id, @product.id) %>
-              <% end %>
-            </p>
+            <% if signed_in? %>
+              <p>
+                <%= form_with(url: '/payments/create') do |form| %>
+                  <%= render partial: "shared/stripe_checkout_button" %>
+                  <%= hidden_field_tag(:product_id, @product.id) %>
+                <% end %>
+              </p>
+            <% else %>
+              <p class="mt2"><strong>
+                Please
+                <a href="/login">log in</a>
+                to pay.
+              </strong></p>
+            <% end %>
 
           </div>
         </div>
