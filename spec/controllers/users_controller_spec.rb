@@ -2,11 +2,22 @@ require 'rails_helper'
 
 describe UsersController, type: :controller do
 
+  let(:admin) { FactoryBot.create(:admin) }
   let(:user) { FactoryBot.create(:user) }
   let(:user2) { User.create!(email: "testuser_2@email.com", password: "password_2") }
 
 
   describe 'GET #show' do
+    context 'when an admin is logged in' do
+      before do
+        sign_in admin
+      end
+      it 'can access other user details' do
+        get :show, params: { id: user2.id }
+        expect(response).to be_ok
+      end
+    end
+
     context 'when a user is logged in' do
       before do
         sign_in user
@@ -30,5 +41,4 @@ describe UsersController, type: :controller do
       end
     end
   end
-
 end

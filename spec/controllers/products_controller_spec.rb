@@ -110,26 +110,24 @@ describe ProductsController, type: :controller do
 
   # Update tests
   describe 'PATCH #update' do
+    before do
+      @product = FactoryBot.create(:product)
+      sign_in admin
+    end
+
     context 'edit form has valid information' do
-      before do
-        @request.host = 'localhost:3000'
-        @product = FactoryBot.create(:product)
-      end
       it 'updates the product with the new information' do
-        patch :update, params: { id: product, name: "race bike" }
+        patch :update, params: { id: @product, product: { name: "race bike" } }
         expect(response).to redirect_to '/products/1'
         expect(flash[:notice]).to eq 'Product was successfully updated.'
       end
     end
+
     context 'edit form has invalid information' do
-      before do
-        @request.host = 'localhost:3000'
-        @product = FactoryBot.create(:product)
-      end
       it 'prevents the update and returns to edit form' do
-        patch :update, params: { id: product, name: " " }
+        patch :update, params: { id: @product, product: { name: "" } }
         expect(response).to render_template('edit')
-        expect(flash[:notice]).to eq Nil
+        expect(flash[:notice]).to eq nil
       end
     end
   end
@@ -138,9 +136,10 @@ describe ProductsController, type: :controller do
   # Destroy tests
   describe 'DELETE #destroy' do
     before do
-      @request.host = 'localhost:3000'
       @product = FactoryBot.create(:product)
+      sign_in admin
     end
+
     it 'successfully destroys the product' do
       delete :destroy, params: { id: product }
       expect(response).to redirect_to(products_path)
