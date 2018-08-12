@@ -21,8 +21,7 @@
 .navbar .hover-item {
   display: inline-flex;
   list-style-type: none;
-  border-radius: 5px;
-  transition: background-color 300ms;
+  transition: background-color 100ms;
 }
 
 .navbar .hover-item:hover {
@@ -66,8 +65,7 @@
   font-weight: 600;
   letter-spacing: 3px;
   color: #118ab7;
-  border-radius: 10px;
-  transition: color 300ms;
+  transition: color 100ms;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -218,8 +216,7 @@
 
 .sidenav-item {
   margin: 10px 70px;
-  border-radius: 5px;
-  transition: background-color 300ms;
+  transition: background-color 100ms;
 
   a {
     font-family: 'Kanit', sans-serif;
@@ -227,8 +224,7 @@
     font-weight: 600;
     letter-spacing: 3px;
     color: #118ab7;
-    border-radius: 5px;
-    transition: 300ms;
+    transition: 100ms;
     padding: 5px 10px;
 
     &:hover,
