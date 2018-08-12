@@ -12,6 +12,7 @@ class ProductsController < ApplicationController
       @products = Product.all
     end
 
+    @products = @products.order("created_at ASC")
     @products = @products.paginate(:page => params[:page], per_page: 6)
   end
 
