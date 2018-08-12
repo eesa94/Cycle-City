@@ -104,9 +104,16 @@ p {
   line-height: 1.8;
 }
 
+.default-text {
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.65rem;
+  line-height: 1.8;
+}
+
 hr {
   border-top: 1px solid #118ab7;
 }
+
 
 // Animation
 .fadeInLeft,
@@ -146,6 +153,19 @@ hr {
 .mb3 {
   margin-bottom: 30px;
 }
+
+.mt1 {
+  margin-top: 10px;
+}
+
+.mt2 {
+  margin-top: 20px;
+}
+
+.mt3 {
+  margin-top: 30px;
+}
+
 
 // Typography
 .justify {
