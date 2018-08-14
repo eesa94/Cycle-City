@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function() {
-  $('#body-content').css('opacity', '1.0');
+  // $('#body-content').css('opacity', '1.0');
 
   $('.alert').addClass('animated alert-animation lightSpeedOut');
 
