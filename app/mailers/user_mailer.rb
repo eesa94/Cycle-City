@@ -2,9 +2,9 @@ class UserMailer < ApplicationMailer
   default from: "info@cyclecity.com"
 
   def contact_form(email, name, message)
-  @message = message
+    @message = message
     mail(from: email,
-         to: 'your-email@example.com',
+         to: 'ep.94@example.com',
          subject: "A new contact form message from #{name}")
   end
 
@@ -12,13 +12,6 @@ class UserMailer < ApplicationMailer
     @appname = "Cycle City"
     mail(to: user.email,
           subject: "Welcome to #{@appname}")
-  end
-
-  def thank_you
-    @name = params[:name]
-    @email = params[:email]
-    @message = params[:message]
-    UserMailer.contact_form(@email, @name, @message).deliver_now
   end
 
 end
