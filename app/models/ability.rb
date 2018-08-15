@@ -7,8 +7,7 @@ class Ability
       can :manage, :all
     else
       can :read, [Product, Order, Comment]
-      cannot :read, User
-      cannot :read, User, id: !user.id
+      cannot :manage, User, id: !user.id
       can :manage, User, id: user.id
     end
   end
