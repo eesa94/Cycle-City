@@ -27,14 +27,21 @@ describe CommentsController, type: :controller do
   # Destroy tests
   describe 'DELETE #destroy' do
     before do
+      @product = FactoryBot.create(:product)
+      FactoryBot.create(:admin)
+      FactoryBot.create(:comment)
       sign_in admin
     end
 
-    it 'admin can delete comment' do
-      @comment = FactoryBot.create(:comment)
-      @product = FactoryBot.create(:product, id: 1)
-      @product.comments << comment
-      expect{delete :destroy, id: @comment.id, product_id: @product}.to change{@product.comments.count}.by(-1)
+    it 'successfully deletes comment' do
+      # @comment = FactoryBot.create(:comment)
+      # @product = FactoryBot.create(:product, id: 1)
+      # @product.comments << comment
+      # expect{delete :destroy, id: @comment.id, product_id: @product}.to change{@product.comments.count}.by(-1)
+
+      # delete :destroy, params: { id: comment }
+      # expect {@product.comment.destroy}.to change(@product.comment, :count).by(-1)
+
 
     end
   end

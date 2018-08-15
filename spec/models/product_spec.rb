@@ -27,10 +27,10 @@ describe Product do
     expect(product.lowest_rating_comment&.rating).to eq 1
   end
 
-  # it 'finds searched product by name' do
-  # product = Product.create(name: "Test Product")
-  # @result = Product.search(search: "Test Product")
-  # expect(@result.name).to eq("Test Product")
-  # end
+  it 'finds searched product by partial name' do
+    product = Product.create(name: "Product")
+    @result = Product.search(search_term: "roduct")
+    expect(@result.name).to eq("Product")
+  end
 
 end
