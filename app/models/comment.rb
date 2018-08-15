@@ -10,5 +10,4 @@ class Comment < ApplicationRecord
   validates :product, presence: true
   validates :rating, numericality: { only_integer: true }
 
-  after_create_commit { CommentUpdateJob.perform_now(self, self.user) }
 end
