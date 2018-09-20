@@ -1,6 +1,4 @@
 body {
-  text-align: center;
-  padding-top: 80px;
 }
 
 html, body {
@@ -9,95 +7,34 @@ html, body {
   padding: 0;
 }
 
-.main-container {
-  min-height: 100%;
-  position: relative;
-  padding: 90px 0 200px;
+html {
+  font-size: 62.5%;
+}
+
+.container-fluid {
+  padding: 0;
 }
 
 @media (max-width: 768px) {
   body {
     padding-top: 50px;
   }
-
-  .main-container {
-    padding-top: 0;
-    margin-top: 40px;
-  }
 }
 
 
-// Home styling
-#hero-container {
-  background-image: url(asset_path("flo-karr-145590-unsplash.jpg"));
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 900px;
-  width: 100%;
-  opacity: 0.88;
+// Home page
+.carousel {
+  // height: 900px;
 }
 
-#hero-caption {
-  max-width: 48vw;
-  margin-top: 16em;
-  border: 6px solid #0f022d;
-  border-radius: 15px;
+.carousel-inner {
+  height: 100%;
 }
 
-#hero-caption h1 {
-  margin-bottom: 20px;
-  font-family: 'Exo', sans-serif;
-  font-weight: 900;
-  text-decoration: none;
-  color: #0f022d;
-  text-align: center;
-  font-size: 3.5em;
-}
-
-#caption-divider {
-  border-top: 2px solid #e3eafc;
-}
-
-#hero-caption h2 {
-  color: #de5c1c;
-  background-color: #0f022d;
-  padding: 20px 5px;
-  width: 53%;
-  margin: 0 auto 20px auto;
-  border-radius: 10px;
-  font-family: 'Exo', sans-serif;
-  font-size: 2.2em;
-  font-weight: 600;
-  transition: color 300ms, background-color 300ms, opacity 300ms;
-}
-
-#hero-caption h2:hover {
-  background-color: #de5c1c;
-  color: #0f022d;
-  opacity: 0.85;
-}
-
-#hero-caption a:hover,
-#hero-caption a:focus {
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  #hero-container {
-    height: 580px;
-  }
-  #hero-caption {
-    max-width: 70vw;
-    margin-top: 9em;
-  }
-  #hero-caption h1 {
-    font-size: 2.0em;
-  }
-  #hero-caption h2 {
-    font-size: 1.5em;
-    width: 100%;
-  }
+.carousel-caption {
+  top: 10%;
+  bottom: 30%;
+  border: 3px solid #fff;
 }
 
 // About styling

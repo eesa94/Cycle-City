@@ -26,108 +26,103 @@
 
   <body>
 
-    <div class="main-container">
-
-      <!-- Primary Navbar (=>1200px) -->
-      <nav class="navbar navbar-inverse navbar-fixed-top primary-navbar" role="navigation">
-        <i class="fas fa-bars" id="sidenav-open-btn"></i>
-        <div class="title navbar-brand">
-          <%= link_to root_path, id: 'home-link' do %>
-            <h1>CYCLECiTy</h1>
-          <% end %>
-        </div>
-        <div class="first-nav-container" id="navbar-container">
-          <div class="navbar-inner">
-            <ul class="nav navbar-nav" id="nav-list">
-              <li class="hover-item"><%= link_to "Home", root_path %></li>
-              <li class="hover-item"><%= link_to "About", simple_pages_about_path %></li>
-              <li class="hover-item"><%= link_to "Products", products_path %></li>
-              <% if user_signed_in? %>
-                <li class="hover-item"><%= link_to "Orders", orders_path %></li>
-              <% end %>
-              <li class="hover-item"><%= link_to "Contact", simple_pages_contact_path %></li>
-            </ul>
-          </div>
-        </div>
-        <div class="second-nav-container">
-          <div class="nav-right">
-            <li id="search-box">
-              <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
-                <%= form.text_field :q, id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
-                <%= form.submit 'Search', id: 'search-btn' %>
-              <% end %>
-            </li>
-              <% if user_signed_in? %>
-                <%= link_to(destroy_user_session_path, method: :delete) do %>
-                  <button class="login-logout">Logout</button>
-                <% end %>
-              <% else %>
-                <%= link_to(new_user_session_path) do %>
-                  <button class="login-logout">Login</button>
-                <% end %>
-              <% end %>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Secondary navbar (<1200px) -->
-      <nav class="secondary-navbar sidenav">
-        <i class="fas fa-times" id="sidenav-close-btn"></i>
-        <div class="inner-nav-container">
-          <div class="navbar-inner">
-            <ul class="navbar-inner-list">
-              <li class="sidenav-item"><%= link_to "Home", root_path %></li>
-              <li class="sidenav-item"><%= link_to "About", simple_pages_about_path %></li>
-              <li class="sidenav-item"><%= link_to "Products", products_path %></li>
-              <% if user_signed_in? %>
-                <li class="sidenav-item"><%= link_to "Orders", orders_path %></li>
-              <% end %>
-              <li class="sidenav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
-            </ul>
-          </div>
-        </div>
-        <li id="sidenav-search-box">
-          <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
-            <%= form.text_field :q, class:'sidenav-textfield', id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
-            <%= form.submit 'Search', id: 'search-btn' %>
-          <% end %>
-        </li>
-          <% if user_signed_in? %>
-            <%= link_to(destroy_user_session_path, method: :delete) do %>
-              <button class="login-logout sidenav-login-logout">Logout</button>
-            <% end %>
-          <% else %>
-            <%= link_to(new_user_session_path) do %>
-              <button class="login-logout sidenav-login-logout">Login</button>
-            <% end %>
-          <% end %>
-      </nav>
-
-
-      <% if notice %>
-        <div class="info-message">
-          <div class="notice alert alert-success" role="alert"><%= notice %></div>
-        </div>
-      <% end %>
-      <% if alert %>
-        <div class="info-message">
-          <div class="alert alert-danger" role="alert"><%= alert %></div>
-        </div>
-      <% end %>
-
-      <div id="body-content">
-      <%= yield %>
+    <!-- Primary Navbar (=>1200px) -->
+    <!-- <nav class="navbar navbar-inverse navbar-fixed-top primary-navbar" role="navigation">
+      <i class="fas fa-bars" id="sidenav-open-btn"></i>
+      <div class="title navbar-brand">
+        <%= link_to root_path, id: 'home-link' do %>
+          <h1>CYCLECiTy</h1>
+        <% end %>
       </div>
+      <div class="first-nav-container" id="navbar-container">
+        <div class="navbar-inner">
+          <ul class="nav navbar-nav" id="nav-list">
+            <li class="hover-item"><%= link_to "Home", root_path %></li>
+            <li class="hover-item"><%= link_to "About", simple_pages_about_path %></li>
+            <li class="hover-item"><%= link_to "Products", products_path %></li>
+            <% if user_signed_in? %>
+              <li class="hover-item"><%= link_to "Orders", orders_path %></li>
+            <% end %>
+            <li class="hover-item"><%= link_to "Contact", simple_pages_contact_path %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="second-nav-container">
+        <div class="nav-right">
+          <li id="search-box">
+            <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
+              <%= form.text_field :q, id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
+              <%= form.submit 'Search', id: 'search-btn' %>
+            <% end %>
+          </li>
+            <% if user_signed_in? %>
+              <%= link_to(destroy_user_session_path, method: :delete) do %>
+                <button class="login-logout">Logout</button>
+              <% end %>
+            <% else %>
+              <%= link_to(new_user_session_path) do %>
+                <button class="login-logout">Login</button>
+              <% end %>
+            <% end %>
+        </div>
+      </div>
+    </nav> -->
 
-      <footer>
-        <div class="tagline">
-          <p class="footer-text"><em>...on your bike!</em></p>
+    <!-- Secondary navbar (<1200px) -->
+    <!-- <nav class="secondary-navbar sidenav">
+      <i class="fas fa-times" id="sidenav-close-btn"></i>
+      <div class="inner-nav-container">
+        <div class="navbar-inner">
+          <ul class="navbar-inner-list">
+            <li class="sidenav-item"><%= link_to "Home", root_path %></li>
+            <li class="sidenav-item"><%= link_to "About", simple_pages_about_path %></li>
+            <li class="sidenav-item"><%= link_to "Products", products_path %></li>
+            <% if user_signed_in? %>
+              <li class="sidenav-item"><%= link_to "Orders", orders_path %></li>
+            <% end %>
+            <li class="sidenav-item"><%= link_to "Contact", simple_pages_contact_path %></li>
+          </ul>
         </div>
-        <div class="copyright">
-          <p>&copy; 2018 Cycle City</p>
-        </div>
-      </footer>
-    </div>
+      </div>
+      <li id="sidenav-search-box">
+        <%= form_with(url: products_path, method: 'get', local: true, class: 'navbar-form') do |form| %>
+          <%= form.text_field :q, class:'sidenav-textfield', id: 'q', placeholder: 'Enter search term...', value: params[:q] %>
+          <%= form.submit 'Search', id: 'search-btn' %>
+        <% end %>
+      </li>
+        <% if user_signed_in? %>
+          <%= link_to(destroy_user_session_path, method: :delete) do %>
+            <button class="login-logout sidenav-login-logout">Logout</button>
+          <% end %>
+        <% else %>
+          <%= link_to(new_user_session_path) do %>
+            <button class="login-logout sidenav-login-logout">Login</button>
+          <% end %>
+        <% end %>
+    </nav> -->
+
+
+    <% if notice %>
+      <div class="info-message">
+        <div class="notice alert alert-success" role="alert"><%= notice %></div>
+      </div>
+    <% end %>
+    <% if alert %>
+      <div class="info-message">
+        <div class="alert alert-danger" role="alert"><%= alert %></div>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
+    <!-- <footer>
+      <div class="tagline">
+        <p class="footer-text"><em>...on your bike!</em></p>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2018 Cycle City</p>
+      </div>
+    </footer> -->
 
   </body>
 </html>
