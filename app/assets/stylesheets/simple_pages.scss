@@ -29,32 +29,54 @@ html {
 }
 
 #image-2 {
-  background-image: url(asset_path("john-gough-525717-unsplash-fade.jpg"));
+  background-image: url(asset_path("lubo-minar-1014100-unsplash-fade.jpg"));
 }
 
 #image-3 {
   background-image: url(asset_path("victor-xok-973349-unsplash-fade.jpg"));
 }
 
+.static-caption {
+  position: absolute;
+  top: 5%;
+  right: 15%;
+  left: 15%;
+}
+
 .carousel-caption {
-  top: 10%;
+  top: 5%;
   bottom: 30%;
   // border: 3px solid #fff;
   padding: 0;
 }
 
+.carousel-indicators .active {
+  background-color: #02a4ff;
+}
+
 .hero-header {
   font-size: 14rem;
-  letter-spacing: 2.5px;
+  letter-spacing: 3px;
   line-height: 1.0;
+  text-shadow: 1px 5px 12px #000000;
 }
 
 .hero-sub-header {
-  font-size: 8rem;
+  margin-left: 20px;
+  font-size: 6rem;
   letter-spacing: 2.5px;
   line-height: 1.0;
+  text-shadow: 1px 3px 6px #000000;
 }
 
+.image-credit {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  font-size: 1.3rem;
+  letter-spacing: 1.2px;
+  color: #949292;
+}
 
 // About styling
 .about-image {
