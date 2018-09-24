@@ -13,19 +13,30 @@ $(document).on('turbolinks:load', function() {
     $('#sidenav-open-btn').css('opacity', '1.0')
   });
 
+
   let state = 0;
 
   $('.nav-open').click(function() {
     if (state === 0) {
-      $('.nav-container').css('top', '0').css('transition-delay', '0.2s');
+      $('.pre-nav-layer').css('top', '0').css('transition-delay', '0s');
+      $('.nav-container').css('top', '0').css('transition-delay', '0.1s');
+      $('.nav-row').addClass('fadeInDown').removeClass('fadeOutUp');
       $('.body-content').addClass('fadeOut').removeClass('fadeIn');
       state = 1;
     } else
     if (state === 1) {
-      $('.nav-container').css('top', '-100%').css('transition-delay', '0s');
+      $('.pre-nav-layer').css('top', '-100%').css('transition-delay', '0.5s');
+      $('.nav-container').css('top', '-100%').css('transition-delay', '0.4s');
+      $('.nav-row').addClass('fadeOutUp').removeClass('fadeInDown');
       $('.body-content').addClass('fadeIn').removeClass('fadeOut');
       state = 0;
     }
+  });
+
+  $('.nav-item-overlay').click(function() {
+    $('.pre-nav-layer').css('top', '-100%').css('transition-delay', '0.5s');
+    $('.nav-container').css('top', '-100%').css('transition-delay', '0.5s');
+    $('.body-content').addClass('fadeIn').removeClass('fadeOut');
   });
 
 

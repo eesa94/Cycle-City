@@ -2,7 +2,18 @@
   position: absolute;
   top: 3%;
   right: 3%;
-  z-index: 200;
+  z-index: 300;
+}
+
+.pre-nav-layer {
+  position: absolute;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: orange;
+  z-index: 100;
+  transition: 0.3s;
+  transition-delay: 0s;
 }
 
 .nav-container {
@@ -11,9 +22,33 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 100;
+  z-index: 200;
   transition: 0.3s;
-  transition-delay: 0.5s;
+  transition-delay: 0.1s;
+}
+
+.nav-row {
+  height: 400px;
+}
+
+.nav-item-overlay {
+  position: absolute;
+  background-color: blue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#nav-item-1 {
+  background-image: url(asset_path("tiffany-nutt-400385-unsplash.jpg"));
+}
+
+#nav-item-2 {
+  background-image: url(asset_path("tyler-nix-550578-unsplash.jpg"));
+}
+
+#nav-item-3 {
+  background-image: url(asset_path("flo-karr-145590-unsplash.jpg"));
 }
 
 
