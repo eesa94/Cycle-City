@@ -25,21 +25,34 @@ html {
 }
 
 #image-1 {
-  background-image: url(asset_path("john-o-nolan-614057-unsplash_edit.jpg"));
-}
-
-#image-2 {
   background-image: url(asset_path("david-marcu-125458-unsplash_edit.jpg"));
 }
 
+#image-2 {
+  background-image: url(asset_path("john-gough-525717-unsplash-fade.jpg"));
+}
+
 #image-3 {
-  background-image: url(asset_path("marcelo-novais-264671-unsplash_edit.jpg"));
+  background-image: url(asset_path("victor-xok-973349-unsplash-fade.jpg"));
 }
 
 .carousel-caption {
   top: 10%;
   bottom: 30%;
-  border: 3px solid #fff;
+  // border: 3px solid #fff;
+  padding: 0;
+}
+
+.hero-header {
+  font-size: 14rem;
+  letter-spacing: 2.5px;
+  line-height: 1.0;
+}
+
+.hero-sub-header {
+  font-size: 8rem;
+  letter-spacing: 2.5px;
+  line-height: 1.0;
 }
 
 
