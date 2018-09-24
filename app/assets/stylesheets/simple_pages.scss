@@ -15,20 +15,25 @@ html {
   padding: 0;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding-top: 50px;
-  }
-}
-
 
 // Home page
-.carousel {
-  // height: 900px;
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
 }
 
-.carousel-inner {
-  height: 100%;
+#image-1 {
+  background-image: url(asset_path("john-o-nolan-614057-unsplash_edit.jpg"));
+}
+
+#image-2 {
+  background-image: url(asset_path("david-marcu-125458-unsplash_edit.jpg"));
+}
+
+#image-3 {
+  background-image: url(asset_path("marcelo-novais-264671-unsplash_edit.jpg"));
 }
 
 .carousel-caption {
@@ -36,6 +41,7 @@ html {
   bottom: 30%;
   border: 3px solid #fff;
 }
+
 
 // About styling
 .about-image {
