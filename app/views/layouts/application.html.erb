@@ -26,6 +26,13 @@
 
   <body>
 
+    <button class="btn btn-primary nav-open white">Click</button>
+
+
+    <nav class="nav-container">
+
+    </nav>
+
     <!-- Primary Navbar (=>1200px) -->
     <!-- <nav class="navbar navbar-inverse navbar-fixed-top primary-navbar" role="navigation">
       <i class="fas fa-bars" id="sidenav-open-btn"></i>
@@ -113,7 +120,9 @@
       </div>
     <% end %>
 
-    <%= yield %>
+    <div class="body-content animated">
+      <%= yield %>
+    </div>
 
     <!-- <footer>
       <div class="tagline">

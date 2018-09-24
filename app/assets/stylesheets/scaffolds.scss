@@ -65,24 +65,21 @@ label {
 
 
 // Animation
-.fadeInLeft,
-.fadeInRight,
-.fadeInDown {
-  animation-duration: 1.3s;
-  // animation-delay: 1s;
+.fadeIn,
+.fadeOut {
+  animation-duration: 0.5s;
 }
 
 .fadeIn {
-  animation-duration: 1.5s;
-  // animation-delay: 1s;
+  animation-delay: 0.1s;
+}
+
+.fadeOut {
+  animation-delay: 0.1s;
 }
 
 .alert-animation {
   animation-delay: 2.5s
-}
-
-#body-content {
-  // opacity: 0;
 }
 
 
