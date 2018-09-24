@@ -43,17 +43,6 @@ html {
   left: 15%;
 }
 
-.carousel-caption {
-  top: 5%;
-  bottom: 30%;
-  // border: 3px solid #fff;
-  padding: 0;
-}
-
-.carousel-indicators .active {
-  background-color: #02a4ff;
-}
-
 .hero-header {
   font-size: 14rem;
   letter-spacing: 3px;
@@ -69,7 +58,37 @@ html {
   text-shadow: 1px 3px 6px #000000;
 }
 
-.image-credit {
+.carousel-caption {
+  top: 35%;
+  bottom: 30%;
+  padding: 0;
+}
+
+.carousel-text {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  color: #ec6b2b;
+  text-shadow: 2px 2px 6px black;
+}
+
+.carousel-btn {
+  margin-top: 90px;
+  padding: 7px 12px;
+  font-size: 1.9rem;
+  letter-spacing: 1.5px;
+  color: #02a4ff;
+  background-color: rgba(41, 54, 62, 0.59);
+  border: 3px solid #02a4ff;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  color: #000;
+  background-color: #00C2FF;
+  border: 3px solid rgba(41, 54, 62, 0);
+}
+
+.image-location {
   position: absolute;
   bottom: 3%;
   right: 3%;
@@ -77,6 +96,11 @@ html {
   letter-spacing: 1.2px;
   color: #949292;
 }
+
+.carousel-indicators .active {
+  background-color: #02a4ff;
+}
+
 
 // About styling
 .about-image {
