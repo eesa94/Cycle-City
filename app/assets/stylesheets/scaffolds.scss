@@ -71,15 +71,15 @@ label {
 }
 
 .fadeIn {
-  animation-delay: 0.1s;
+  animation-delay: 0.5s;
 }
 
 .fadeOut {
-  animation-delay: 0.1s;
+  animation-delay: 0s;
 }
 
 .fadeInDown {
-  animation-delay: 0.3s;
+  animation-delay: 0.4s;
 }
 
 .fadeOutUp {
@@ -206,6 +206,10 @@ hr {
 
 .blue {
   color: #02a4ff;
+}
+
+.yellow {
+  color: #f9f871;
 }
 
 .pink {
