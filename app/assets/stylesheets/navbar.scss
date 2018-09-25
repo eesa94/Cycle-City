@@ -8,6 +8,7 @@
 .nav-container {
   position: fixed;
   top: -100%;
+  // top: 0;
   width: 100%;
   height: 100%;
   background-color: black;
@@ -16,8 +17,12 @@
   transition-delay: 0.1s;
 }
 
+.nav-items-container {
+  border-bottom: 5px solid #02a4ff;
+}
+
 .nav-row {
-  height: 400px;
+  height: 50vh;
 }
 
 .nav-item {
@@ -39,7 +44,7 @@
 }
 
 #nav-item-2 {
-  background-image: url(asset_path("ian-608003-unsplash-fade.jpg"));
+  background-image: url(asset_path("ian-608003-unsplash-fade-desat.jpg"));
 }
 
 #nav-item-3 {
@@ -59,7 +64,7 @@
   position: relative;
   top: 0;
   letter-spacing: 1.5px;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   transition: all 0.3s ease;
 }
 
