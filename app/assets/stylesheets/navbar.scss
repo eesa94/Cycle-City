@@ -20,23 +20,56 @@
   height: 400px;
 }
 
-.nav-item-overlay {
+.nav-item {
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item:hover {
+  text-decoration: none;
 }
 
 #nav-item-1 {
-  background-image: url(asset_path("tiffany-nutt-400385-unsplash.jpg"));
+  background-image: url(asset_path("tessa-rampersad-493843-unsplash-fade.jpg"));
 }
 
 #nav-item-2 {
-  background-image: url(asset_path("tyler-nix-550578-unsplash.jpg"));
+  background-image: url(asset_path("ian-608003-unsplash-fade.jpg"));
 }
 
 #nav-item-3 {
-  background-image: url(asset_path("flo-karr-145590-unsplash.jpg"));
+  background-image: url(asset_path("noah-rosenfield-761102-unsplash-fade.jpg"));
+}
+
+.nav-item-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.overlay-header {
+  position: relative;
+  top: 0;
+  letter-spacing: 1.5px;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.hover-fadeUp {
+  position: relative;
+  top: 15%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-size: 1.6rem;
+  width: 80%;
 }
 
 
