@@ -24,7 +24,9 @@ $(document).on('turbolinks:load', function() {
 
       $('.nav-container').css('top', '0').css('transition-delay', '0.1s');
 
-      $('.nav-row').addClass('fadeInDown').removeClass('fadeOutUp');
+      $('.primary-links-row').addClass('fadeInDown').removeClass('fadeOutUp');
+
+      $('.secondary-links-row').addClass('fadeIn').removeClass('fadeOut');
 
       $('.body-content').addClass('fadeOut').removeClass('fadeIn');
 
@@ -37,7 +39,9 @@ $(document).on('turbolinks:load', function() {
 
       $('.nav-container').css('top', '-100%').css('transition-delay', '0.4s');
 
-      $('.nav-row').addClass('fadeOutUp').removeClass('fadeInDown');
+      $('.primary-links-row').addClass('fadeOutUp').removeClass('fadeInDown');
+
+      $('.secondary-links-row').addClass('fadeOut').removeClass('fadeIn');
 
       $('.body-content').addClass('fadeIn').removeClass('fadeOut');
 

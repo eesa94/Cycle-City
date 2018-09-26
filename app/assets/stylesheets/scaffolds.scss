@@ -63,6 +63,10 @@ label {
   margin: 20px auto 0;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 
 // Animation
 .fadeIn,
@@ -118,6 +122,14 @@ label {
 
 .mt3 {
   margin-top: 30px;
+}
+
+.padding-1 {
+  padding: 10px;
+}
+
+.padding-2 {
+  padding: 20px;
 }
 
 

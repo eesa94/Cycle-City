@@ -17,11 +17,12 @@
   transition-delay: 0.1s;
 }
 
-.nav-items-container {
+.primary-links-container {
   border-bottom: 5px solid #02a4ff;
 }
 
-.nav-row {
+.primary-links-row,
+.secondary-links-row {
   height: 50vh;
 }
 
@@ -74,6 +75,32 @@
   opacity: 0;
   transition: all 0.3s ease;
   font-size: 2rem;
+}
+
+.nav-header {
+  font-size: 2.8rem;
+  margin: 40px auto 20px;
+}
+
+.nav-divider {
+  width: 50%;
+  height: 3px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.secondary-links-list {
+  padding: 30px 100px;
+}
+
+.secondary-link {
+  font-size: 2rem;
+  transition: 0.3s;
+  margin: 0 auto 10px;
+
+  &:hover {
+    color: #02a4ff;
+  }
 }
 
 
