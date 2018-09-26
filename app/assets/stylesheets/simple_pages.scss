@@ -131,7 +131,29 @@
   background-position: center;
 }
 
+.card-image {
+  height: 300px;
+}
 
+#card-image-1 {
+  background-image: url(asset_path("matthias-patzuda-760859-unsplash-tint.jpg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#card-image-2 {
+  background-image: url(asset_path("max-adulyanukosol-586980-unsplash-tint.jpg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-title {
+  font-size: 5rem;
+}
+
+.card-text {
+  font-size: 1.5rem;
+}
 
 .thumbnail {
   box-shadow: 5px 5px 7px lightgrey;
