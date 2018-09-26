@@ -19,6 +19,35 @@ html {
   padding: 0;
 }
 
+.hero-container {
+  height: 600px;
+  width: 100%;
+  background-position: center;;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+.hero-header {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  font-size: 7rem;
+  letter-spacing: 2.5px;
+  line-height: 1.0;
+  text-shadow: 1px 5px 12px #000000;
+}
+
+.hero-sub-header {
+  position: relative;
+  top: 50%;
+  font-size: 4rem;
+  letter-spacing: 2.5px;
+  line-height: 1.0;
+  text-shadow: 1px 5px 12px #000000;
+}
+
+
 
 // Home page
 .carousel-item {
@@ -51,14 +80,14 @@ html {
   left: 15%;
 }
 
-.hero-header {
+.carousel-header {
   font-size: 14rem;
   letter-spacing: 3px;
   line-height: 1.0;
   text-shadow: 1px 5px 12px #000000;
 }
 
-.hero-sub-header {
+.carousel-sub-header {
   margin-left: 20px;
   font-size: 6rem;
   letter-spacing: 2.5px;
@@ -133,6 +162,12 @@ html {
 
 
 // About styling
+.about-hero-container {
+  background-image: url(asset_path("kay-liedl-423158-unsplash-fade.jpg"));
+  background-position: 0px -90px;
+}
+
+
 .about-image {
   max-width: 100%;
   margin: 30px auto;
