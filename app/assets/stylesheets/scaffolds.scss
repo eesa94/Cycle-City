@@ -112,8 +112,8 @@ html {
 .hero-sub-header {
   position: relative;
   top: 50%;
-  font-size: 4rem;
-  letter-spacing: 2.5px;
+  font-size: 4.5rem;
+  letter-spacing: 4px;
   line-height: 1.0;
   text-shadow: 1px 5px 12px #000000;
 }
@@ -148,6 +148,7 @@ html {
 .image-background {
   height: 400px;
   width: 100%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
