@@ -113,7 +113,7 @@
 // About styling
 .about-hero-container {
   background-image: url(asset_path("flo-karr-145590-unsplash-fade.jpg"));
-  background-position: 0px -100px;
+  background-position: center;
 }
 
 #about-1 {
@@ -129,6 +129,10 @@
 #about-3 {
   background-image: url(asset_path("john-gough-525717-unsplash-fade.jpg"));
   background-position: center;
+}
+
+.about-container {
+  min-height: 600px;
 }
 
 .card-image {
