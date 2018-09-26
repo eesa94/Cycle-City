@@ -68,6 +68,98 @@ a:hover {
 }
 
 
+// Custom common styles
+body {
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.body-content {
+  transition: 0.3s;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.hero-container {
+  height: 600px;
+  width: 100%;
+  background-position: center;;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+.hero-header {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  font-size: 7rem;
+  letter-spacing: 2.5px;
+  line-height: 1.0;
+  text-shadow: 1px 5px 12px #000000;
+}
+
+.hero-sub-header {
+  position: relative;
+  top: 50%;
+  font-size: 4rem;
+  letter-spacing: 2.5px;
+  line-height: 1.0;
+  text-shadow: 1px 5px 12px #000000;
+}
+
+.sub-row {
+  border-bottom: 2px solid #fab297;
+  padding-bottom: 30px;
+}
+
+.page-header {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.sub-header {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.underline {
+  width: 100px;
+  height: 3px;
+  background-color: black;
+  margin: 15px 0 40px;
+}
+
+.default-text {
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.image-background {
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 60px auto;
+}
+
+.image-overlay {
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(77, 179, 237, 0.5), rgba(109, 177, 255, 0.5), rgba(153, 172, 255, 0.5), rgba(202, 163, 255, 0.5), rgba(248, 150, 253, 0.5));
+}
+
+
 // Animation
 .fadeIn,
 .fadeOut {
@@ -130,35 +222,6 @@ a:hover {
 
 .padding-2 {
   padding: 20px;
-}
-
-
-// Common Elements styling
-.sub-row {
-  border-bottom: 2px solid #fab297;
-  padding-bottom: 30px;
-}
-
-.page-header {
-  font-size: 6rem;
-  margin: 0;
-}
-
-.sub-header {
-  font-size: 4rem;
-  line-height: 1;
-}
-
-.underline {
-  width: 100px;
-  height: 3px;
-  background-color: black;
-  margin: 15px 0 40px;
-}
-
-.default-text {
-  font-size: 1.8rem;
-  line-height: 1.2;
 }
 
 
