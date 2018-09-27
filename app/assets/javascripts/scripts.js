@@ -97,6 +97,24 @@ $(document).on('turbolinks:load', function() {
     }
   );
 
+  $('.action-background').hover(
+    function() {
+      $(this).find('i').addClass('animated pulse');
+    },
+    function() {
+      $(this).find('i').removeClass('animated pulse');
+    }
+  )
+
+  $('.social-icon').hover(
+    function() {
+      $(this).addClass('animated pulse');
+    },
+    function() {
+      $(this).removeClass('animated pulse');
+    }
+  )
+
 
 
 });

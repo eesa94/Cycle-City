@@ -36,10 +36,10 @@
       <div class="primary-links-container">
         <div class="row primary-links-row no-gutters animated">
           <div class="col-md-4">
-            <a href="/about" class="nav-item h-100 w-100" id="nav-item-1">
+            <a href="/about#about-3" class="nav-item h-100 w-100" id="nav-item-1">
               <div class="nav-item-overlay flex-column">
                 <h2 class="overlay-header kanit-3 white no-margin">Tour Types</h2>
-                <p class="hover-fadeUp white kanit-3 text-center">Can't decide between guided or self guided? Private or group? Don't worry, all is explained here.</p>
+                <p class="hover-fadeUp white kanit-3 text-center">Can't decide between guided or self guided? Private or group? All is explained here.</p>
               </div>
             </a>
           </div>
@@ -70,22 +70,32 @@
               <a href="/" class="secondary-link white kanit-3">Home</a>
               <a href="/about" class="secondary-link white kanit-3">About Us</a>
               <a href="/" class="secondary-link white kanit-3">FAQs</a>
-              <a href="/login" class="secondary-link white kanit-3">Log In</a>
+
+              <% if user_signed_in? %>
+                <%= link_to(destroy_user_session_path, method: :delete, class:"secondary-link white kanit-3") do %>
+                  Log Out
+                <% end %>
+              <% else %>
+                <%= link_to(new_user_session_path, class:"secondary-link white kanit-3") do %>
+                  Log In
+                <% end %>
+              <% end %>
+
             </div>
           </div>
           <div class="col-md-6 d-flex flex-row justify-content-center align-items-center">
             <div class="d-flex justify-content-between">
-              <a href="https://www.facebook.com">
-                <i class="fab fa-facebook-square dark-blue"></i>
+              <a href="https://www.facebook.com" class="d-flex justify-content-center align-items-center social-icon" id="facebook">
+                <i class="fab fa-facebook-f white"></i>
               </a>
-              <a href="https://www.twitter.com">
-                <i class="fab fa-twitter light-blue"></i>
+              <a href="https://www.twitter.com" class="d-flex justify-content-center align-items-center social-icon" id="twitter">
+                <i class="fab fa-twitter white"></i>
               </a>
-                <a href="https://www.instagram.com">
+                <a href="https://www.instagram.com" class="d-flex justify-content-center align-items-center social-icon" id="instagram">
                 <i class="fab fa-instagram white"></i>
               </a>
-                <a href="https://www.youtube.com">
-                <i class="fab fa-youtube red"></i>
+                <a href="https://www.youtube.com" class="d-flex justify-content-center align-items-center social-icon" id="youtube">
+                <i class="fab fa-youtube white"></i>
               </a>
             </div>
           </div>

@@ -133,6 +133,10 @@
   background-image: url(asset_path("rikki-chan-122572-unsplash-tint.jpg"));
 }
 
+#about-5 {
+  background-image: url(asset_path("semih-aydin-38747-unsplash-tint.jpg"));
+}
+
 .about-container {
   min-height: 600px;
 }
@@ -169,6 +173,23 @@
 
 .card-text {
   font-size: 1.6rem;
+}
+
+.action-col {
+  height: 150px;
+}
+
+.action-background {
+  background-color: #fff;
+  border: 3px solid #fff;
+  transition: 0.4s ease;
+
+  i {
+    font-size: 6.8rem;
+  }
+
+  &:hover {
+  }
 }
 
 
