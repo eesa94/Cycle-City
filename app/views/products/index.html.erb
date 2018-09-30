@@ -1,7 +1,3 @@
-<% if signed_in? && current_user.admin? %>
-  <%= link_to 'New Product', new_product_path, class: "btn btn-primary", id: "new-product-btn" %>
-<% end %>
-
 <div class="container-fluid hero-container products-hero">
   <h1 class="hero-brand do-hyeon white">Euro Bike Tours</h1>
   <h1 class="hero-header exo white text-center">Routes</h1>
@@ -13,12 +9,15 @@
   </div>
 </div>
 
-<div class="container products-container" data-turbolinks="false">
+<div class="container products-container text-center" data-turbolinks="false">
   <div class="row">
     <% cache(cache_key_for_products) do %>
       <%= render @products %>
     <% end %>
   </div>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'New Product', new_product_path, class: "btn btn-primary kanit-3", id: "new-product-btn" %>
+  <% end %>
 </div>
 
-<br>
+<%= render partial: 'footer' %>

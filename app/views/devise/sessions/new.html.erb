@@ -1,37 +1,46 @@
-<h1 class="page-header animated fadeInDown">Log in</h1>
+<div class="container-fluid image-background" style="background-image: url(/assets/flo-karr-145590-unsplash-fade.jpg); margin-top: 0;">
+  <div class="image-overlay d-flex align-items-center justify-content-center">
+    <h1 class="section-header exo white text-center no-margin text-capitalize">Log In</h1>
+  </div>
+</div>
+
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "custom-form animated fadeIn"}) do |f| %>
+    <div class="col-10 offset-1">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {class: "custom-form"}) do |f| %>
 
       <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
+        <div class="col-10 offset-1">
           <div class="form-group">
-            <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
+            <%= f.label :email, class: "kanit-3 blue" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "blue form-control" %>
           </div>
 
           <div class="form-group">
-            <%= f.label :password %><br />
+            <%= f.label :password, class: "kanit-3 blue" %><br />
             <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
           </div>
 
           <% if devise_mapping.rememberable? -%>
-            <div class="form-group">
+            <div class="form-group text-center">
+              <%= f.label :remember_me, class: "kanit-3"  %>
               <%= f.check_box :remember_me %>
-              <%= f.label :remember_me %>
             </div>
           <% end -%>
         </div>
       </div>
 
-      <div class="actions">
-        <%= f.submit "Log in", class: "form-label" %>
+      <div class="actions text-center mt2">
+        <%= f.submit "Log in", class: "form-label submit" %>
       </div>
       <% end %>
     </div>
   </div>
 </div>
 
-<%= render "devise/shared/links" %>
+<div class="text-center">
+  <%= render "devise/shared/links" %>
+</div>
+
+<%= render partial: 'footer' %>

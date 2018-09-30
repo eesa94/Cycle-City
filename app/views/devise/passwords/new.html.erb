@@ -1,16 +1,22 @@
-<h1 class="page-header">Forgot your password?</h1>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="container-fluid image-background" style="background-image: url(/assets/flo-karr-145590-unsplash-fade.jpg); margin-top: 0;">
+  <div class="image-overlay d-flex align-items-center justify-content-center">
+    <h1 class="section-header exo white text-center no-margin text-capitalize">Forgot your Password?</h1>
   </div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
+<div class="text-center">
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= devise_error_messages! %>
 
-<%= render "devise/shared/links" %>
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Send me reset password instructions" %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>
