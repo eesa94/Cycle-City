@@ -10,14 +10,18 @@
 </div>
 
 <div class="container-fluid products-container text-center" data-turbolinks="false">
-  <div class="row no-margin">
+  <div class="row no-margin products-row">
     <% cache(cache_key_for_products) do %>
       <%= render @products %>
     <% end %>
   </div>
+</div>
+
+<div class="text-center">
   <% if signed_in? && current_user.admin? %>
     <%= link_to 'New Product', new_product_path, class: "btn btn-primary kanit-3", id: "new-product-btn" %>
   <% end %>
 </div>
+
 
 <%= render partial: 'footer' %>

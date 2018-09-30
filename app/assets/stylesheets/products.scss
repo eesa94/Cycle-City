@@ -66,11 +66,25 @@
   color: #fff;
 }
 
+.products-container {
+  margin-bottom: 100px;
+}
+
+.products-row {
+  min-height: 500px;
+}
+
 .products-individual {
   margin-bottom: 100px;
 }
 
-.product-image {
+.product-thumbnail {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.product-thumbnail {
   transition: 0.3s;
 
   &:hover {
@@ -79,10 +93,19 @@
   }
 }
 
+.product-name {
+  letter-spacing: 1.5px;
+  font-size: 3.2rem;
+}
+
 .product-header {
   font-size: 2.5rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+}
+
+.product-information {
+  height: 200px;
 }
 
 .view-more {

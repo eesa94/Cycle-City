@@ -1,8 +1,12 @@
 <% cache product do %>
   <div class="col-12 col-md-4 products-individual">
 
-    <%= link_to product do %>
-      <%= image_tag(product.image_url, class: "img-fluid product-image") %>
+    <%= link_to product, class: "h-100 w-100" do %>
+      <div class="product-thumbnail h-100 w-100 d-flex justify-content-center align-items-center" style="background-image: url(<%= image_path product.image_url%>)">
+        <h2 class="product-name white kanit-3 no-margin">Southern Sun</h2>
+
+      </div>
+
     <% end %>
 
     <%= link_to product do %>
