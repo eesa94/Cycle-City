@@ -16,12 +16,12 @@
       </h3>
       <div class="product-information">
         <div class="tour-summary d-flex align-items-center justify-content-center">
-          <h2 class="kanit-3 text-right no-margin">700km</h2>
+          <h2 class="kanit-3 text-right no-margin"><%= product.distance %> km</h2>
           <span>|</span>
-          <h2 class="kanit-3 text-left no-margin">7 days</h2>
+          <h2 class="kanit-3 text-left no-margin"><%= product.duration %> days</h2>
         </div>
         <div class="tour-tagline">
-          <p class="default-text kanit-3 no-margin">An epic blast across France, starting in the English capital and finishing in the beautiful Swiss city of Geneva.
+          <p class="default-text kanit-3 no-margin"><%= product.tagline %>
         </div>
         <div class="tour-price">
           <p class="default-text kanit-3 no-margin">£ <%= product.price %> </p>
