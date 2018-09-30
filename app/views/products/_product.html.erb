@@ -1,13 +1,16 @@
 <% cache product do %>
   <div class="col-12 col-md-4 products-individual">
+
     <%= link_to product do %>
-      <%= image_tag(product.image_url, class: "img-fluid") %>
+      <%= image_tag(product.image_url, class: "img-fluid product-image") %>
     <% end %>
+
     <%= link_to product do %>
-      <h3><%= product.name %></h3>
+      <h3 class="product-header kanit-5 mt2 mb2 black"><%= product.name %></h3>
     <% end %>
-    <p>
-      <%= link_to 'View More', product, class: "btn btn-primary mt2 mb1", role: "button" %>
-    </p>
+
+
+    <%= link_to 'View More', product, class: "view-more kanit-3 white", role: "button" %>
+
   </div>
 <% end %>

@@ -9,8 +9,8 @@
   </div>
 </div>
 
-<div class="container products-container text-center" data-turbolinks="false">
-  <div class="row">
+<div class="container-fluid products-container text-center" data-turbolinks="false">
+  <div class="row no-margin">
     <% cache(cache_key_for_products) do %>
       <%= render @products %>
     <% end %>

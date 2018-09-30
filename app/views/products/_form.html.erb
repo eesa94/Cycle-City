@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-10 col-xs-offset-1">
+    <div class="col-10 offset-1">
       <%= form_with(model: product, local: true, id: "product-form") do |form| %>
         <% if product.errors.any? %>
           <div id="error_explanation">
@@ -15,50 +15,50 @@
         <% end %>
 
       <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
+        <div class="col-10 offset-1">
 
           <div class="form-group">
-            <%= form.label :name %>
+            <%= form.label :name, class: "default-text kanit-3 blue" %>
             <%= form.text_field :name, class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :description %>
+            <%= form.label :description, class: "default-text kanit-3 blue" %>
             <%= form.text_area :description, class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :image_url %>
+            <%= form.label :image_url, class: "default-text kanit-3 blue" %>
             <%= form.text_field :image_url, class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :colour %>
+            <%= form.label :colour, class: "default-text kanit-3 blue" %>
             <%= form.text_field :colour, class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :price %>
+            <%= form.label :price, class: "default-text kanit-3 blue" %>
             <%= form.text_field :price, class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :image1 %>
+            <%= form.label :image1, class: "default-text kanit-3 blue" %>
             <%= form.text_field :image1, class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :image2 %>
+            <%= form.label :image2, class: "default-text kanit-3 blue" %>
             <%= form.text_field :image2, class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :image3 %>
+            <%= form.label :image3, class: "default-text kanit-3 blue" %>
             <%= form.text_field :image3, class: "form-control" %>
           </div>
 
           <div class="form-group">
-            <%= form.label :image4 %>
+            <%= form.label :image4, class: "default-text kanit-3 blue" %>
             <%= form.text_field :image4, class: "form-control" %>
           </div>
 
@@ -66,8 +66,8 @@
         </div>
       </div>
 
-      <div class="actions">
-        <%= form.submit class: "btn-primary" %>
+      <div class="actions text-center">
+        <%= form.submit class: "btn submit" %>
       </div>
       <% end %>
     </div>
