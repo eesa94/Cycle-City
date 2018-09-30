@@ -68,14 +68,21 @@
 
 .products-container {
   margin-bottom: 100px;
+  min-height: 700px;
+}
+
+@media (min-width: 1200px) {
+  .products-container {
+    max-width: 1400px;
+  }
 }
 
 .products-row {
-  min-height: 500px;
+  min-height: 100%;
 }
 
 .products-individual {
-  margin-bottom: 100px;
+  margin-bottom: 400px;
 }
 
 .product-thumbnail {
@@ -88,7 +95,6 @@
   transition: 0.3s;
 
   &:hover {
-    transform: scale(1.035);
     opacity: 0.8;
   }
 }
@@ -98,16 +104,44 @@
   font-size: 3.2rem;
 }
 
+.product-card {
+  border: 1px solid;
+  margin-bottom: 30px;
+}
+
 .product-header {
   font-size: 2.5rem;
   letter-spacing: 1.5px;
 }
 
 .product-information {
-  height: 200px;
+  width: 80%;
+  margin: 0 auto;
+  min-height: 200px;
+}
+
+.tour-summary {
+  border-top: 1px solid #6c757d;
+  border-bottom: 1px solid #6c757d;
+}
+
+.tour-summary span {
+  margin: 0 25px;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+.tour-tagline {
+  padding: 15px 10px;
+  border-bottom: 1px solid #6c757d;
+}
+
+.tour-price {
+  padding: 15px;
 }
 
 .view-more {
+  margin-top: 30px;
   font-size: 1.5rem;
   padding: 10px 15px;
   background-color: #02a4ff;
