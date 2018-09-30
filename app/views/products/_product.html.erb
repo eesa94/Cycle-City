@@ -3,15 +3,16 @@
 
     <%= link_to product, class: "h-100 w-100" do %>
       <div class="product-thumbnail h-100 w-100 d-flex justify-content-center align-items-center" style="background-image: url(<%= image_path product.image_url%>)">
-        <h2 class="product-name white kanit-3 no-margin">Southern Sun</h2>
-
+        <h2 class="product-name white kanit-3 no-margin">
+          <%= product.name %>
+        </h2>
       </div>
 
     <% end %>
 
-    <%= link_to product do %>
-      <h3 class="product-header kanit-5 mt2 mb2 black"><%= product.name %></h3>
-    <% end %>
+    <h3 class="product-header kanit-5 mt2 mb2 black">
+      <%= product.start %> to <%= product.finish %>
+    </h3>
 
 
     <%= link_to 'View More', product, class: "view-more kanit-3 white", role: "button" %>
