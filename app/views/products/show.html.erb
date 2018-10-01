@@ -39,7 +39,7 @@
               Difficulty: <strong><%= @product.difficulty %></strong>
             </p>
             <p class="default-text kanit-3 justify">
-              Price: <strong>£<%= @product.price/100 %></strong>
+              Price: <strong>£<%= @product.price %></strong>
             </p>
             <div class="rated d-flex align-items-center mb3" id="average-rating" data-score="<%= @product.average_rating %>">
               <span class="default-text kanit-3 justify">Average Rating:</span>
@@ -56,18 +56,18 @@
           <h3 class="sub-header kanit-5 mb1">More Images</h3>
           <div class="more-images-gallery">
             <div class="row no-margin">
-              <div class="col-6 image-box">
+              <div class="col-md-6 image-box">
                 <%= image_tag(@product.image1, class: "img-fluid") %>
               </div>
-              <div class="col-6 image-box">
+              <div class="col-md-6 image-box">
                 <%= image_tag(@product.image2, class: "img-fluid") %>
               </div>
             </div>
             <div class="row no-margin">
-              <div class="col-6 image-box">
+              <div class="col-md-6 image-box">
                 <%= image_tag(@product.image3, class: "img-fluid") %>
               </div>
-              <div class="col-6 image-box">
+              <div class="col-md-6 image-box">
                 <%= image_tag(@product.image4, class: "img-fluid") %>
               </div>
             </div>
