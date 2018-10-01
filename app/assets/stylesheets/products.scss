@@ -45,7 +45,7 @@
 .navbar-form {
   width: 40%;
   margin: 0 auto;
-  padding: 0 35px;
+  padding: 3px 35px;
   background-color: #f8f9fa;
   border-radius: 5px;
   border: 3px solid #02a4ff;
@@ -191,6 +191,22 @@
 
 .product-summary-container {
   padding: 10px 5px;
+}
+
+.enquire {
+  min-width: 130px;
+  height: 40px;
+  background-color: #ec6b2b;
+  color: white;
+  border: 3px solid #ec6b2b;
+  font-size: 1.6rem;
+  transition: 0.3 ease;
+
+  &:hover {
+    background-color: #fff;
+    color: #ec6b2b;
+    border: 3px solid #ec6b2b;
+  }
 }
 
 .image-box {

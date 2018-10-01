@@ -2,9 +2,9 @@ class Product < ApplicationRecord
   has_many :comments, dependent: :destroy
   def self.search(search_term)
     if Rails.env.production?
-      Product.where("name ilike ?", "%#{search_term}%")
+      Product.where("start || finish ilike ?", "%#{search_term}%")
     else
-      Product.where("name LIKE ?", "%#{search_term}%")
+      Product.where("start || finish LIKE ?", "%#{search_term}%")
     end
   end
 
