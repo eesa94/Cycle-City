@@ -16,6 +16,19 @@
   margin: 15px auto;
 }
 
+.back {
+  position: fixed;
+  top: 3%;
+  left: 1%;
+  z-index: 200;
+  background-color: #02a4ff;
+  font-size: 2rem;
+
+  &:hover {
+    color: white;
+  }
+}
+
 
 // Products Index View Styling
 .product-index-hero {
