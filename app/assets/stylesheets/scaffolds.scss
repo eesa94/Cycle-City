@@ -101,7 +101,6 @@ html, body {
   background-position: center;;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 100px;
 }
 
 .hero-brand {
@@ -127,6 +126,7 @@ html, body {
 .sub-row {
   border-bottom: 1px solid #02a4ff;
   padding-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .section-header {
@@ -237,6 +237,10 @@ html, body {
 
 
 // Typography
+small {
+  font-weight: 100;
+}
+
 .justify {
   text-align: justify;
 }

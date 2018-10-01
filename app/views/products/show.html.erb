@@ -1,4 +1,4 @@
-<div class="container-fluid hero-container product-background-image" style="background-image: url(<%= image_path @product.image_url%>)">
+<div class="container-fluid hero-container product-show-hero" style="background-image: url(<%= image_path @product.image_url%>)">
   <h1 class="product-header hero-header kanit-7 white text-center">
     <%= @product.name %>
   </h1>
@@ -14,7 +14,7 @@
       <div class="product-route-underline">
       </div>
 
-      <div class="row sub-row mb3">
+      <div class="row sub-row">
         <div class="col-12 col-md-7 mb2">
           <h3 class="sub-header kanit-5 mb1">Tour Details</h3>
           <p class="default-text kanit-3 justify">
@@ -22,22 +22,22 @@
           </p>
         </div>
 
-        <div class="col-12 col-md-4 offset-md-1 mb2 product-summary-col">
+        <div class="col-10 offset-1 col-md-4 offset-md-1 mb2 product-summary-col">
           <h3 class="sub-header kanit-5 mb1">Summary</h3>
           <div class="product-summary-container">
             <p class="default-text kanit-3 justify">
-              Distance: <%= @product.distance %> km
+              Distance: <strong><%= @product.distance %> km</strong>
             </p>
             <p class="default-text kanit-3 justify">
-              Duration: <%= @product.duration %> days
+              Duration: <strong><%= @product.duration %> days</strong>
             </p>
             <p class="default-text kanit-3 justify">
-              Difficulty: <%= @product.difficulty %>
+              Difficulty: <strong><%= @product.difficulty %></strong>
             </p>
             <p class="default-text kanit-3 justify">
-              Price: £<%= @product.price/100 %>
+              Price: <strong>£<%= @product.price/100 %></strong>
             </p>
-            <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>">
+            <div class="rated d-flex align-items-center" id="average-rating" data-score="<%= @product.average_rating %>">
               <span class="default-text kanit-3 justify">Average Rating:</span>
             </div>
 
@@ -45,9 +45,9 @@
         </div>
       </div> <!-- end sub-row -->
 
-      <div class="row sub-row mb3">
-        <div class="col-12 col-md-4 more-images-container mb2">
-          <h3 class="mb1">More Images</h3>
+      <div class="row sub-row">
+        <div class="col-12 more-images-container mb2">
+          <h3 class="sub-header kanit-5 mb1">More Images</h3>
           <div class="more-images-gallery">
             <div class="row no-margin">
               <div class="col-6 image-box">
@@ -70,20 +70,21 @@
       </div>
 
       <div class="row sub-row">
-        <div class="col-lg-5 offset-lg-1">
-          <h3 class="mb3">Product Reviews</h3>
-          <p class="justify">We greatly value the feedback we receive from satisfied customers, and we love hearing what people have to say about our products.
+        <div class="col-lg-5">
+          <h3 class="sub-header kanit-5 mb3">Product Reviews</h3>
+          <p class="default-text kanit-3 justify">We greatly value the feedback we receive from satisfied customers, and we love hearing what people have to say about our tours.
           </p>
-          <p class="justify mb3">If you are a returning customer, why not leave a comment? Whether good or bad, hearing about your experience is important to us so that we can continue to improve our service.
+          <p class="default-text kanit-3 justify">Thinking about booking a tour with us? Why not see what others have to say about us?</p>
+          <p class="default-text kanit-3 justify mb3"> If you are a returning traveller, why not leave a comment? Whether good or bad, hearing about your experience is important to us so that we can continue to improve our service.
           </p>
-          <div class="rated mb1" id="highest-rating" data-score="<%= @product.highest_rating_comment&.rating %>">
-            <span>Product Highest Rating</span>
+          <div class="rated d-flex align-items-center mb1" id="highest-rating" data-score="<%= @product.highest_rating_comment&.rating %>">
+            <span class="default-text kanit-3">Highest Rating: </span>
           </div>
           <div class="rated" id="lowest-rating" data-score="<%= @product.lowest_rating_comment&.rating %>">
-            <span>Product Lowest Rating</span>
+            <span class="default-text kanit-3">Lowest Rating: </span>
           </div>
         </div>
-        <div class="col-lg-4 offset-lg-1">
+        <div class="col-lg-4 offset-lg-2">
           <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
           <%= render 'comments' %>
         </div>
@@ -100,6 +101,10 @@
   </div>
 </div>
 
-<% if signed_in? && current_user.admin? %>
-  <p><%= link_to 'Show', @product %> | <%= link_to 'Edit', edit_product_path(@product) %> | <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<% end %>
+<div class="text-center">
+  <% if signed_in? && current_user.admin? %>
+    <p><%= link_to 'Show', @product %> | <%= link_to 'Edit', edit_product_path(@product) %> | <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+</div>
+
+<%= render partial: 'footer' %>

@@ -1,17 +1,17 @@
 <% if signed_in? %>
-  <div class="review-form col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-    <h3>Add a review:</h3>
+  <div class="review-form col-sm-8 offset-sm-3 col-md-6 col-md-offset-3">
+    <h3 class="sub-header kanit-5">Add a review:</h3>
     <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
       <p>
-        <%= f.text_area :body, class: "form-control" %>
+        <%= f.text_area :body, class: "form-control", style: "resize: none;" %>
       </p>
 
       <p>
         <div class="rating"></div>
       </p>
 
-      <p>
-        <%= f.submit "Submit" %>
+      <p class="text-center">
+        <%= f.submit "Submit", class: "submit mt2" %>
       </p>
     <% end %>
   </div>
