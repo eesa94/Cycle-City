@@ -3,17 +3,6 @@ $(document).on('turbolinks:load', function() {
 
   $('.alert').addClass('animated alert-animation lightSpeedOut');
 
-  $('#sidenav-open-btn').click(function() {
-    $('.sidenav').css('width', '300px');
-    $(this).css('opacity', '0.1');
-  });
-
-  $('#sidenav-close-btn').click(function() {
-    $('.sidenav').css('width', '0');
-    $('#sidenav-open-btn').css('opacity', '1.0')
-  });
-
-
   // navbar expand/collapse
   let state = 0;
 
@@ -37,7 +26,7 @@ $(document).on('turbolinks:load', function() {
 
       $(this).toggleClass('is-active');
 
-      $('.nav-container').css('top', '-100%').css('transition-delay', '0.4s');
+      $('.nav-container').css('top', '-110%').css('transition-delay', '0.4s');
 
       $('.primary-links-row').addClass('fadeOutUp').removeClass('fadeInDown');
 

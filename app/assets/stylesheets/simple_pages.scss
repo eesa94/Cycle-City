@@ -262,6 +262,11 @@ label {
     display: none;
   }
 
+  .hero-header {
+    left: 20%;
+    right: 20%;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -300,6 +305,10 @@ label {
   .nav-open {
     top: 1%;
     right: 1%;
+  }
+
+  .navbar-form {
+    width: 80%;
   }
 
   footer {
