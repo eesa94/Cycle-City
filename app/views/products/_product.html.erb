@@ -2,8 +2,8 @@
   <div class="col-12 col-md-4 products-individual">
 
     <%= link_to product, class: "h-100 w-100" do %>
-      <div class="product-thumbnail h-100 w-100 d-flex justify-content-center align-items-center" style="background-image: url(<%= image_path product.image_url%>)">
-        <h2 class="product-name white kanit-3 no-margin">
+      <div class="product-background-image hover h-100 w-100 d-flex justify-content-center align-items-center" style="background-image: url(<%= image_path product.image_url%>)">
+        <h2 class="card-name white kanit-3 no-margin">
           <%= product.name %>
         </h2>
       </div>
@@ -11,19 +11,19 @@
     <% end %>
 
     <div class="product-card">
-      <h3 class="product-header kanit-5 mt2 mb2 black">
+      <h3 class="card-route kanit-5 mt2 mb2 black">
         <%= product.start %> to <%= product.finish %>
       </h3>
-      <div class="product-information">
-        <div class="tour-summary d-flex align-items-center justify-content-center">
+      <div class="card-information">
+        <div class="card-summary d-flex align-items-center justify-content-center">
           <h2 class="kanit-3 text-right no-margin"><%= product.distance %> km</h2>
           <span>|</span>
           <h2 class="kanit-3 text-left no-margin"><%= product.duration %> days</h2>
         </div>
-        <div class="tour-tagline">
+        <div class="card-tagline">
           <p class="default-text kanit-3 no-margin"><%= product.tagline %>
         </div>
-        <div class="tour-price">
+        <div class="card-price">
           <p class="default-text kanit-3 no-margin">£ <%= product.price %> </p>
         </div>
       </div>

@@ -18,7 +18,7 @@
 
 
 // Products Index View Styling
-.products-hero {
+.product-index-hero {
   background-image: url(asset_path("ian-608003-unsplash-tint.jpg"));
   margin-bottom: 100px;
 }
@@ -85,21 +85,20 @@
   margin-bottom: 400px;
 }
 
-.product-thumbnail {
+.product-background-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: 0.3s;
 }
 
-.product-thumbnail {
-  transition: 0.3s;
-
+.hover:hover {
   &:hover {
     opacity: 0.8;
   }
 }
 
-.product-name {
+.card-name {
   letter-spacing: 1.5px;
   font-size: 3.2rem;
 }
@@ -109,34 +108,34 @@
   margin-bottom: 30px;
 }
 
-.product-header {
+.card-route {
   font-size: 2.5rem;
   letter-spacing: 1.5px;
 }
 
-.product-information {
+.card-information {
   width: 80%;
   margin: 0 auto;
   min-height: 200px;
 }
 
-.tour-summary {
+.card-summary {
   border-top: 1px solid #6c757d;
   border-bottom: 1px solid #6c757d;
 }
 
-.tour-summary span {
+.card-summary span {
   margin: 0 25px;
   padding: 10px;
   font-size: 2rem;
 }
 
-.tour-tagline {
+.card-tagline {
   padding: 15px 10px;
   border-bottom: 1px solid #6c757d;
 }
 
-.tour-price {
+.card-price {
   padding: 15px;
 }
 
@@ -154,24 +153,25 @@
 }
 
 // Products Show View Styling
-.show-view-image {
-  max-width: 60%;
-  margin: 20px auto;
+.product-route {
+  font-size: 4rem;
+  letter-spacing: 1.5px;
 }
 
-.zoomContainer {
-  display: none;
-}
-
-.product-header-underline {
+.product-route-underline {
   width: 50%;
-  margin: 0 auto 50px;
+  margin: 0 0 50px;
   height: 4px;
-  background-color: #fab297;
+  background-color: #02a4ff;
 }
 
-.price {
-  color: #118ab7;
+.product-summary-col {
+  border: 1px solid #02a4ff;
+  padding: 15px;
+}
+
+.product-summary-container {
+  padding: 10px 5px;
 }
 
 .image-box {
