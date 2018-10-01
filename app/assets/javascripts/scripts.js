@@ -26,7 +26,7 @@ $(document).on('turbolinks:load', function() {
 
       $(this).toggleClass('is-active');
 
-      $('.nav-container').css('top', '-110%').css('transition-delay', '0.4s');
+      $('.nav-container').css('top', '-150%').css('transition-delay', '0.4s');
 
       $('.primary-links-row').addClass('fadeOutUp').removeClass('fadeInDown');
 

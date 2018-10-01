@@ -266,7 +266,6 @@ label {
     left: 20%;
     right: 20%;
   }
-
 }
 
 @media (max-width: 767px) {
@@ -295,11 +294,20 @@ label {
   }
 
   .carousel-tagline {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .carousel-text {
     width: 80%;
+  }
+
+  .carousel-caption {
+    right: 5%;
+    left: 5%;
+  }
+
+  .carousel-btn {
+    margin-top: 40px;
   }
 
   .nav-open {
@@ -320,7 +328,6 @@ label {
     height: 40px;
     margin: 0 3px;
   }
-
 }
 
 @media (max-width: 575px) {
@@ -331,5 +338,4 @@ label {
   .carousel-header {
     font-size: 8rem;
   }
-
 }
