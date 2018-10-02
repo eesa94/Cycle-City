@@ -117,7 +117,7 @@
 }
 
 .product-card {
-  border: 1px solid;
+  border: 1px solid #02a4ff;
   margin-bottom: 30px;
 }
 
@@ -133,23 +133,28 @@
 }
 
 .card-summary {
-  border-top: 1px solid #6c757d;
-  border-bottom: 1px solid #6c757d;
-}
+  border-top: 1px solid #02a4ff;
+  border-bottom: 1px solid #02a4ff;
 
-.card-summary span {
-  margin: 0 25px;
-  padding: 10px;
-  font-size: 2rem;
+  span {
+    margin: 0 25px;
+    padding: 10px;
+    font-size: 2rem;
+  }
 }
 
 .card-tagline {
   padding: 15px 10px;
-  border-bottom: 1px solid #6c757d;
+  border-bottom: 1px solid #02a4ff;
 }
 
 .card-price {
   padding: 15px;
+
+  p {
+    font-size: 2.5rem;
+    line-height: 1.2
+  }
 }
 
 .view-more {
